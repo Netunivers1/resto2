@@ -1,0 +1,188 @@
+<div class="row">
+    <div class="col-md-4 pull-left">
+        <a 
+            class="btn waves-effect waves-light btn-primary pull-left hidden-lg-down"
+            style="color: #fff; background: #0275d8 !important; border: 1px solid #0275d8;"
+            routerLink="/admin/ajoutplat"
+        >
+            Ajouter un nouveau plat
+        </a>    
+    </div>
+</div><br>
+
+<div class="row" *ngIf="insertOrList;">
+    <div class="col-md-12">
+        <div class="alert alert-success">
+            <strong>Un nouveau plat a été ajouté avec success!</strong>
+        </div>
+    </div>
+</div>
+
+<div class="row" *ngIf="deleted;">
+    <div class="col-md-12">
+        <div class="alert alert-success">
+            <strong>Un plat a été supprimé avec success!</strong>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">Liste des plats</h4>
+                <hr>
+                <div id="overlay" *ngIf="!platsCharger;">
+                    <div id="text">Chargement des plats en cours...</div>
+                </div>               
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prix</th>
+                                <th>Ingrédient</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let plat of plats">
+                                <td>{{plat.nom | uppercase}}</td>
+                                <td>{{plat.prix}}</td>
+                                <td>{{plat.ingredient}}</td>
+                                <td style="width: 25%;">
+                                    <a 
+                                        class="btn waves-effect waves-light btn-primary pull-left hidden-lg-down"
+                                        style="color: #fff; background: #f07f0a !important; border: 1px solid #f07f0a; margin-right: 5px;"
+                                        (click)="ngxSmartModalService.getModal('modifierModal').open(); modifierPlat(plat);"
+                                    >
+                                        Modifier
+                                    </a>
+                                    <a 
+                                        class="btn waves-effect waves-light btn-primary pull-left hidden-lg-down dialog__close-btn ng-tns-c5-2 ng-star-inserted"
+                                        style="color: #fff; background: red !important; border: 1px solid red;"
+                                        (click)="ngxSmartModalService.getModal('myModal').open();supprimerPlat(plat)"
+                                    >
+                                        Supprimer
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ngx-smart-modal #myModal identifier="myModal">
+    <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Attention</h4>
+    </div>
+
+    <div class="modal-body">
+        <h3>Voulez vous vraiment supprimer ce plat ?</h3>
+    </div>
+
+    <div class="modal-footer">
+        <a 
+            type="button"
+            class="btn btn-default" 
+            data-dismiss="modal"
+            style="color: #fff; background: red !important;"
+            routerLink="/admin/deleteplat/{{idPlatTodelete}}" 
+        >
+            Supprimer
+        </a>
+        <button 
+            type="button"
+            class="btn btn-primary"
+            style="color: #fff; background: #f07f0a !important; border: 1px solid #f07f0a;" 
+            (click)="myModal.close()"
+        >
+            Annuler
+        </button>
+    </div>
+</ngx-smart-modal>
+
+<ngx-smart-modal #modifierModal identifier="modifierModal">
+    <div *ngIf="platToModifier">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">
+                Modification du plat {{platToModifier.nom}}
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div class="table-responsive">
+                <form #boiss="ngForm" (ngSubmit)="onClickSubmit(boiss.value)" method="PUT">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Nom du plat
+                                </th>
+                                <th>
+                                    <input 
+                                        type="text" 
+                                        placeholder="Nom de la boisson" 
+                                        class="form-control form-control-line"
+                                        name="nom"
+                                        ngModel="{{platToModifier.nom}}"
+                                    >
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>Prix</th>
+                                <th>
+                                    <input 
+                                        type="text" 
+                                        placeholder="Prix pour les 33cl" 
+                                        class="form-control form-control-line"
+                                        name="pm"
+                                        ngModel="{{platToModifier.prix}}"
+                                    >                                   
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>Ingrédient</th>
+                                <th>
+                                    <input 
+                                        type="text" 
+                                        placeholder="Prix pour les 50cl" 
+                                        class="form-control form-control-line"
+                                        name="ingredient"
+                                        ngModel="{{platToModifier.ingredient}}"
+                                    >                                   
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                </th>
+                                <th>
+                                    <input 
+                                        type="hidden"
+                                        name="id"
+                                        ngModel="{{platToModifier.id}}"
+                                    >
+                                    <input 
+                                        type="submit" 
+                                        value="Modifier"
+                                        class="btn waves-effect waves-light pull-left hidden-lg-down"
+                                        style="color: #fff; background: #097912 !important; border: 1px solid #097912 !important; margin-right: 10px;"
+                                    >
+                                    <a 
+                                        class="btn waves-effect waves-light pull-left hidden-lg-down"
+                                        style="color: #fff; background: #f0a00e !important; border: 1px solid #d8aa02"
+                                        (click)="modifierModal.close()"
+                                    >
+                                        Annuler
+                                    </a>                                    
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                </form>
+            </div>            
+        </div>
+    </div>
+</ngx-smart-modal>

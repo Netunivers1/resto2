@@ -1,0 +1,41 @@
+AppBundle\Entity\User:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+    properties:
+        firstname:
+            - NotBlank: ~
+            - Type: string
+        lastname:
+            - NotBlank: ~
+            - Type: string
+        email:
+            - NotBlank: ~
+            - Email: ~
+
+AppBundle\Entity\Menu:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: nom
+    properties:
+        nom:
+            - NotBlank: ~
+            - Type: string
+        ingredient:
+            - NotBlank: ~
+            - Type: string
+        prix:
+            - NotBlank: ~
+            - Type: string
+
+AppBundle\Entity\Plat:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: nom
+    properties:
+        nom:
+            - NotBlank: ~
+            - Type: string
+        ingredient:
+            - NotBlank: ~
+            - Type: string
+        prix:
+            - NotBlank: ~
+            - Type: string           

@@ -1,0 +1,115 @@
+<!-- Menu -->
+<div class="menu">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2">
+				<a 
+					target="_self" 
+					role="button" 
+					id="comp-itb5kbcnlink" 
+					class="b4link"
+					style="margin-left: 20px;" 
+					(click)="scrollTo('#s'+1, '#v-scrollable')"
+				>
+					<span 
+						id="comp-itb5kbcnlabel" 
+						class="b4label"
+						style="font: normal normal normal 25px/1.4em 'playfair display',serif;" 
+					>
+						Le Dakota
+					</span>
+				</a>				
+			</div>
+			<div class="col-md-8">
+				<div class="row">
+						<div class="col-md-2">							
+						</div>
+
+						<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-3">
+									<a 
+										class="pull-left"
+										(click)="scrollTo('#s'+1, '#v-scrollable')"
+									>
+										ACCUEILL
+									</a>						
+								</div>
+								<div class="col-md-3">
+									<a 
+										class="text-center"
+										(click)="scrollTo('#s'+2, '#v-scrollable')"
+									>
+										PRESENTATION
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a 
+										class="pull-right"
+										(click)="scrollTo('#s'+3, '#v-scrollable')"
+									>
+										MENU
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a 
+										class="pull-right"
+										(click)="scrollTo('#s'+4, '#v-scrollable')"
+									>
+										CONTACT
+									</a>
+								</div>									
+							</div>
+						</div>
+
+						<div class="col-md-2">							
+						</div>											
+				</div>
+			</div>
+			<div class="col-md-2">
+				<a 
+					routerLink="/admin/dashboard" 
+					class="btn btn-success pull-right"
+					style="background: green; border: 1px solid green;" 
+				>
+					Admninstration
+				</a>
+			</div>				
+		</div>
+	</div>
+</div>
+<!-- Fin menu -->
+
+<div 
+	id="v-scrollable" 
+	class="scrollable section"
+	ng2-scrollable (elementVisible)="scrollEvent()"
+>
+
+	<div id="s1">
+		<app-home></app-home>
+	</div>
+
+	<div id="s2">
+		<app-presentation></app-presentation>
+	</div>
+	
+	<div id="s3">
+		<h4 class="font_4">
+			Nos entrées
+		</h4>
+	</div>	
+	<app-menu></app-menu>
+
+	<div id="plat">
+		<h4 class="font_4">
+			Nos plats
+		</h4>
+	</div>
+	<app-plat></app-plat>	
+
+	<div id="s4" style="background: #e8e8e8;">
+		<app-contact></app-contact>
+	</div>
+
+</div>

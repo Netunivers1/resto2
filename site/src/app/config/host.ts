@@ -1,3 +1,3 @@
-const host = 'http://localhost/api_resto2/web/app_dev.php';
+const host = 'https://aretmic.com/api/resto2/web/app_dev.php';
 
 export const urlApi = host;

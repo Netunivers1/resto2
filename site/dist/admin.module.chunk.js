@@ -20,12 +20,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__menu_ajout_ajout_component__ = __webpack_require__("../../../../../src/app/admin/menu/ajout/ajout.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__plat_delete_delete_component__ = __webpack_require__("../../../../../src/app/admin/plat/delete/delete.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__menu_delete_delete_component__ = __webpack_require__("../../../../../src/app/admin/menu/delete/delete.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__utilisateur_utilisateur_component__ = __webpack_require__("../../../../../src/app/admin/utilisateur/utilisateur.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__utilisateur_ajout_ajout_component__ = __webpack_require__("../../../../../src/app/admin/utilisateur/ajout/ajout.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -63,6 +67,8 @@ var AdminModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_11__menu_ajout_ajout_component__["a" /* AjoutMenuComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__plat_delete_delete_component__["a" /* DeletePlatComponent */],
                 __WEBPACK_IMPORTED_MODULE_13__menu_delete_delete_component__["a" /* DeleteMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__utilisateur_utilisateur_component__["a" /* UtilisateurComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__utilisateur_ajout_ajout_component__["a" /* AjoutUtilisateurComponent */],
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
@@ -90,6 +96,10 @@ var AdminModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_ajout_ajout_component__ = __webpack_require__("../../../../../src/app/admin/menu/ajout/ajout.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__plat_delete_delete_component__ = __webpack_require__("../../../../../src/app/admin/plat/delete/delete.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__menu_delete_delete_component__ = __webpack_require__("../../../../../src/app/admin/menu/delete/delete.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utilisateur_utilisateur_component__ = __webpack_require__("../../../../../src/app/admin/utilisateur/utilisateur.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utilisateur_ajout_ajout_component__ = __webpack_require__("../../../../../src/app/admin/utilisateur/ajout/ajout.component.ts");
+
+
 
 
 
@@ -107,6 +117,8 @@ var routes = [
     { path: 'deleteplat/:id', component: __WEBPACK_IMPORTED_MODULE_6__plat_delete_delete_component__["a" /* DeletePlatComponent */] },
     { path: 'ajoutmenu', component: __WEBPACK_IMPORTED_MODULE_5__menu_ajout_ajout_component__["a" /* AjoutMenuComponent */] },
     { path: 'deletemenu/:id', component: __WEBPACK_IMPORTED_MODULE_7__menu_delete_delete_component__["a" /* DeleteMenuComponent */] },
+    { path: 'utilisateur', component: __WEBPACK_IMPORTED_MODULE_8__utilisateur_utilisateur_component__["a" /* UtilisateurComponent */] },
+    { path: 'ajoututilisateur', component: __WEBPACK_IMPORTED_MODULE_9__utilisateur_ajout_ajout_component__["a" /* AjoutUtilisateurComponent */] },
 ];
 var adminRouting = __WEBPACK_IMPORTED_MODULE_0__angular_router__["d" /* RouterModule */].forChild(routes);
 
@@ -824,6 +836,189 @@ var PlatComponent = /** @class */ (function () {
             __WEBPACK_IMPORTED_MODULE_3_ngx_smart_modal__["b" /* NgxSmartModalService */]])
     ], PlatComponent);
     return PlatComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/utilisateur/ajout/ajout.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/utilisateur/ajout/ajout.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <!-- Column -->\n    <div class=\"col-lg-4 col-xlg-3 col-md-5\">\n        <div class=\"card\">\n            <div class=\"card-block\" style=\"text-align: center;\">\n            \t\t<img src=\"assets/images/profil.png\" class=\"img-circle\" width=\"150\" />\n                    <h4 class=\"card-title m-t-10\">Photo de profil</h4>\n                    <h6 class=\"card-subtitle\">Glisser ici votre photo</h6>\n            </div>\n        </div>\n    </div>\n    <!-- Column -->\n    <!-- Column -->\n    <div class=\"col-lg-8 col-xlg-9 col-md-7\">\n        <div class=\"card\">\n            <div class=\"card-block\">\n                <form #utilisateurForm=\"ngForm\" (ngSubmit)=\"onClickSubmit(utilisateurForm.value)\" class=\"form-horizontal form-material\">\n                \t{{utilisateursCharger}}\n                    <div class=\"form-group\">\n                        <label class=\"col-md-12\">Pseudo</label>\n                        <div class=\"col-md-12\">\n                            <input \n                            \ttype=\"text\" \n                            \tplaceholder=\"Ex: John60\" \n                            \tclass=\"form-control form-control-line\"\n                            \tname=\"pseudo\" \n                            \tngModel\n                            >\n                        </div>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"example-email\" class=\"col-md-12\">Email</label>\n                        <div class=\"col-md-12\">\n                            <input \n                            \ttype=\"email\" \n                            \tplaceholder=\"Ex: email@email.com\" \n                            \tclass=\"form-control form-control-line\" \n                            \tname=\"email\" \n                            \tngModel\n                            >\n                        </div>\n                    </div>\n                    <div class=\"form-group\">\n                        <label class=\"col-md-12\">Nom</label>\n                        <div class=\"col-md-12\">\n                            <input \n                            \ttype=\"text\" \n                            \tplaceholder=\"Ex: Johnathan\" \n                            \tclass=\"form-control form-control-line\"\n                            \tname=\"nom\"\n                            \tngModel\n                            >\n                        </div>\n                    </div>\n                    <div class=\"form-group\">\n                        <label class=\"col-md-12\">Prenom</label>\n                        <div class=\"col-md-12\">\n                            <input \n                            \ttype=\"text\" \n                            \tplaceholder=\"Ex: Micher\" \n                            \tclass=\"form-control form-control-line\"\n                            \tname=\"prenom\"\n                            \tngModel\n                            >\n                        </div>\n                    </div>\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-12\">Rôle</label>\n                        <div class=\"col-sm-12\">\n                            <select \n                            \tclass=\"form-control form-control-line\"\n                            \tname=\"role\"\n                            \tngModel\n                            >\n                                <option value=\"Administrateur\">Administrateur</option>\n                                <option value=\"Contributeur\">Contributeur</option>\n                                <option value=\"Utilisateur\">Utilisateur</option>\n                            </select>\n                        </div>\n                    </div>\n                    <div class=\"form-group\">\n                        <label class=\"col-md-12\">Mot de passe</label>\n                        <div class=\"col-md-12\">\n                            <input \n                            \ttype=\"password\" \n                            \tplaceholder=\"********\" \n                            \tclass=\"form-control form-control-line\"\n                            \tname=\"password\" \n                            \tngModel\n                            >\n                        </div>\n                    </div>\n                    <div class=\"form-group\">\n                        <div class=\"col-sm-12\">\n                            <button class=\"btn btn-success col-sm-4\">Envoyer</button>\n                            <a \n\t\t\t\t\t            class=\"btn btn-warning col-sm-4\"\n\t\t\t\t\t            routerLink=\"/admin/utilisateur\"\n\t\t\t\t\t        >\n\t\t\t\t\t        \tRetour\n\t\t\t\t\t    \t</a>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n    <!-- Column -->\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/utilisateur/ajout/ajout.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AjoutUtilisateurComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_host__ = __webpack_require__("../../../../../src/app/config/host.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AjoutUtilisateurComponent = /** @class */ (function () {
+    function AjoutUtilisateurComponent(http, router) {
+        this.http = http;
+        this.router = router;
+    }
+    AjoutUtilisateurComponent.prototype.ngOnInit = function () {
+    };
+    AjoutUtilisateurComponent.prototype.onClickSubmit = function (data) {
+        var _this = this;
+        var messageErreur = this.validationFomulaire(data);
+        if (messageErreur) {
+            alert(messageErreur);
+            return false;
+        }
+        var url = __WEBPACK_IMPORTED_MODULE_1__config_host__["a" /* urlApi */] + '/utilisateur';
+        this.http.post(url, data).subscribe(function (res) {
+            _this.router.navigate(['/admin/utilisateur']);
+        }, function (err) {
+            alert('Ce pseudo ' + data.pseudo + ' est déjà utilisé');
+        });
+    };
+    AjoutUtilisateurComponent.prototype.validationFomulaire = function (data) {
+        var message = '';
+        if (data.password === '')
+            message = 'Le champ password ne doit pas être vide';
+        if (data.role === '')
+            message = 'Le champ role ne doit pas être vide';
+        if (data.prenom === '')
+            message = 'Le champ prenom ne doit pas être vide';
+        if (data.nom === '')
+            message = 'Le champ nom ne doit pas être vide';
+        if (data.email === '')
+            message = 'Le champ email ne doit pas être vide';
+        if (data.pseudo === '')
+            message = 'Le champ pseudo ne doit pas être vide';
+        if (message != '')
+            return message;
+        return false;
+    };
+    AjoutUtilisateurComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-ajout-utilisateur',
+            template: __webpack_require__("../../../../../src/app/admin/utilisateur/ajout/ajout.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/admin/utilisateur/ajout/ajout.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* Router */]])
+    ], AjoutUtilisateurComponent);
+    return AjoutUtilisateurComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/utilisateur/utilisateur.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "tbody tr:hover {\n\tcursor: pointer;\n}\n\n.ajouteruser {\n\tcolor: #fff; \n\tbackground: #0275d8 !important; \n\tborder: 1px solid #0275d8;\n\tfloat: right; \n\tposition: relative; \n\tbottom: 10px;\t\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/utilisateur/utilisateur.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <!-- column -->\n    <div class=\"col-lg-12\">\n        <div class=\"card\">\n            <div class=\"card-block\">\n                <h4 class=\"card-title\" style=\"display: inline; color: #0275d8;\">\n                \tListes de tous les utilisateurs\n            \t</h4>\n                <a \n\t\t            class=\"btn ajouteruser waves-effect waves-light btn-primary pull-left hidden-lg-down\"\n\t\t            routerLink=\"/admin/ajoututilisateur\"\n\t\t        >\n\t\t            Ajouter un nouveau utilisateur\n\t\t        </a>\n                <hr>\n\n                <div class=\"table-responsive\">\n                    <table class=\"table\">\n                        <thead>\n                            <tr>\n                                <th>#</th>\n                                <th>Identifient</th>\n                                <th>Email</th>\n                                <th>Rôle</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr *ngFor=\"let utilisateur  of utilisateurs\">\n                                <td>{{utilisateur.id}}</td>\n                                <td>{{utilisateur.pseudo}}</td>\n                                <td>{{utilisateur.email}}</td>\n                                <td>{{utilisateur.role}}</td>\n                            </tr>\n                        </tbody>\n                    </table>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/utilisateur/utilisateur.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UtilisateurComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_host__ = __webpack_require__("../../../../../src/app/config/host.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var UtilisateurComponent = /** @class */ (function () {
+    function UtilisateurComponent(http, route, router) {
+        this.http = http;
+        this.route = route;
+        this.router = router;
+        this.utilisateursCharger = false;
+    }
+    UtilisateurComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_3__config_host__["a" /* urlApi */] + '/utilisateurs';
+        this.http.get(url)
+            .map(function (response) { return response.json(); })
+            .subscribe(function (data) {
+            _this.utilisateurs = data;
+            _this.utilisateursCharger = (data.length > 0) ? true : false;
+        });
+    };
+    UtilisateurComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-utilisateur',
+            template: __webpack_require__("../../../../../src/app/admin/utilisateur/utilisateur.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/admin/utilisateur/utilisateur.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* Router */]])
+    ], UtilisateurComponent);
+    return UtilisateurComponent;
 }());
 
 

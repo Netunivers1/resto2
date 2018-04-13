@@ -15,6 +15,8 @@ import { AjoutPlatComponent } from './plat/ajout/ajout.component';
 import { AjoutMenuComponent } from './menu/ajout/ajout.component';
 import { DeletePlatComponent } from './plat/delete/delete.component';
 import { DeleteMenuComponent } from './menu/delete/delete.component';
+import { UtilisateurComponent } from './utilisateur/utilisateur.component';
+import { AjoutUtilisateurComponent } from './utilisateur/ajout/ajout.component';
 // import { RegisterComponent } from './register/register.component';
 // import { AlertComponent } from '../_directives/alert/alert.component';
 // import { LoginComponent } from './login/login.component';
@@ -37,6 +39,8 @@ import { DeleteMenuComponent } from './menu/delete/delete.component';
     AjoutMenuComponent,
     DeletePlatComponent,
     DeleteMenuComponent,
+    UtilisateurComponent,
+    AjoutUtilisateurComponent,
     // RegisterComponent,
     // LoginComponent
   ],

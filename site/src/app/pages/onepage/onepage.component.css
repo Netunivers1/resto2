@@ -63,7 +63,8 @@ ul.window li {display: block; }
 
 #s1 {
   box-shadow:inset 0 0 0 100px rgba(0,0,0,0.5);
-  background: url('https://static.wixstatic.com/media/56c94b8a849e440081794f62edffef66.jpg/v1/fill/w_1299,h_785,al_c,q_85,usm_0.66_1.00_0.01/56c94b8a849e440081794f62edffef66.webp');
+  background: url('slider_template_2.jpg');
+  background-size: cover;
   height: 600px;
 }
 

@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminHeaderComponent implements OnInit {
 
-  constructor() { }
+	user;
 
-  ngOnInit() {
-  }
+	constructor() { }
+
+	ngOnInit() {
+		let user = JSON.parse(localStorage.getItem('infosUtilisateur'));
+		this.user = user.user;
+	}
 
 }

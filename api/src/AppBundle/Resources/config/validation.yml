@@ -1,14 +1,3 @@
-AppBundle\Entity\Places:
-    constraints:
-        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: name
-    properties:
-        name:
-            - NotBlank: ~
-            - Type: string
-        address:
-            - NotBlank: ~
-            - Type: string
-
 AppBundle\Entity\User:
     constraints:
         - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
@@ -23,34 +12,31 @@ AppBundle\Entity\User:
             - NotBlank: ~
             - Email: ~
 
-AppBundle\Entity\Boisson:
+AppBundle\Entity\Menu:
     constraints:
         - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: nom
     properties:
         nom:
-            - NotBlank: ~
-            - Type: string
-        pm:
-            - NotBlank: ~
-            - Type: string
-        gm:
-            - NotBlank: ~
-            - Type: string
-
-AppBundle\Entity\Pizza:
-    constraints:
-        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: nom
-    properties:
-        nom:
-            - NotBlank: ~
-            - Type: string
-        pm:
-            - NotBlank: ~
-            - Type: string
-        gm:
             - NotBlank: ~
             - Type: string
         ingredient:
+            - NotBlank: ~
+            - Type: string
+        prix:
+            - NotBlank: ~
+            - Type: string
+
+AppBundle\Entity\Plat:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: nom
+    properties:
+        nom:
+            - NotBlank: ~
+            - Type: string
+        ingredient:
+            - NotBlank: ~
+            - Type: string
+        prix:
             - NotBlank: ~
             - Type: string
 

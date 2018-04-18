@@ -9,7 +9,7 @@
 					id="comp-itb5kbcnlink" 
 					class="b4link"
 					style="margin-left: 20px;" 
-					(click)="scrollTo('#s'+1, '#v-scrollable')"
+					(click)="goTo('#home')"
 				>
 					<span 
 						id="comp-itb5kbcnlabel" 
@@ -18,7 +18,7 @@
 					>
 						Le Dakota
 					</span>
-				</a>				
+				</a>
 			</div>
 			<div class="col-md-8">
 				<div class="row">
@@ -30,15 +30,15 @@
 								<div class="col-md-3">
 									<a 
 										class="pull-left"
-										(click)="scrollTo('#s'+1, '#v-scrollable')"
+										(click)="goTo('#home')"
 									>
-										ACCUEILL
+										ACCUEIL
 									</a>						
 								</div>
 								<div class="col-md-3">
 									<a 
 										class="text-center"
-										(click)="scrollTo('#s'+2, '#v-scrollable')"
+										(click)="goTo('#presentation')"
 									>
 										PRESENTATION
 									</a>
@@ -46,7 +46,7 @@
 								<div class="col-md-3">
 									<a 
 										class="pull-right"
-										(click)="scrollTo('#s'+3, '#v-scrollable')"
+										(click)="goTo('#menu')"
 									>
 										MENU
 									</a>
@@ -54,7 +54,7 @@
 								<div class="col-md-3">
 									<a 
 										class="pull-right"
-										(click)="scrollTo('#s'+4, '#v-scrollable')"
+										(click)="goTo('#contact')"
 									>
 										CONTACT
 									</a>
@@ -68,12 +68,25 @@
 			</div>
 			<div class="col-md-2">
 				<a 
-					routerLink="/admin/dashboard" 
-					class="btn btn-success pull-right"
-					style="background: green; border: 1px solid green;" 
+					routerLink="/"				 
 				>
-					Admninstration
+					<img src="assets/images/logo/logo_fb.png">
 				</a>
+				<a 
+					routerLink="/"					 
+				>
+					<img src="assets/images/logo/logo_instagram.png">
+				</a>
+				<a 
+					routerLink="/"					 
+				>
+					<img src="assets/images/logo/logo-o_o.png">
+				</a>
+				<a 
+					routerLink="/"					 
+				>
+					<img src="assets/images/logo/logo_etoil.png">
+				</a>				
 			</div>				
 		</div>
 	</div>
@@ -81,34 +94,48 @@
 <!-- Fin menu -->
 
 <div 
-	id="v-scrollable" 
-	class="scrollable section"
-	ng2-scrollable (elementVisible)="scrollEvent()"
+	id="content" 
 >
 
-	<div id="s1">
+	<div id="home">
 		<app-home></app-home>
 	</div>
 
-	<div id="s2">
+	<div id="presentation">
 		<app-presentation></app-presentation>
 	</div>
 	
-	<div id="s3">
-		<h4 class="font_4">
-			Nos entrées
-		</h4>
-	</div>	
-	<app-menu></app-menu>
+	<div id="menu">
+		<div parallax class="parallax-entrees" [config]="{axis: X, speed: .0}">
+			<h4 class="font_4">
+				Nos entrées
+			</h4>
+		</div>
+		<app-menu></app-menu>
 
-	<div id="plat">
-		<h4 class="font_4">
-			Nos plats
-		</h4>
+		<div parallax class="parallax-plats" [config]="{axis: X, speed: .0}">
+			<h4 class="font_4">
+				Nos plats
+			</h4>
+		</div>		
+		<app-plat></app-plat>
+
+		<div parallax class="parallax-desserts" [config]="{axis: X, speed: -.5}">
+			<h4 class="font_4">
+				Nos desserts
+			</h4>
+		</div>	
+		<app-dessert></app-dessert>	
+
+		<div parallax class="parallax-boissons" [config]="{axis: X, speed: -.3}">
+			<h4 class="font_4">
+				Nos boissons
+			</h4>
+		</div>
+		<app-boisson></app-boisson>
 	</div>
-	<app-plat></app-plat>	
 
-	<div id="s4" style="background: #e8e8e8;">
+	<div id="contact" style="background: #e8e8e8;">
 		<app-contact></app-contact>
 	</div>
 

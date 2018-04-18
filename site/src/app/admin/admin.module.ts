@@ -17,6 +17,12 @@ import { DeletePlatComponent } from './plat/delete/delete.component';
 import { DeleteMenuComponent } from './menu/delete/delete.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { AjoutUtilisateurComponent } from './utilisateur/ajout/ajout.component';
+import { DesertComponent } from './desert/desert.component';
+import { DeleteDessertComponent } from './desert/delete/delete.component';
+import { AjoutDessertComponent } from './desert/ajout/ajout.component';
+import { BoissonComponent } from './boisson/boisson.component';
+import { AjoutBoissonComponent } from './boisson/ajout/ajout.component';
+import { DeleteBoissonComponent } from './boisson/delete/delete.component';
 // import { RegisterComponent } from './register/register.component';
 // import { AlertComponent } from '../_directives/alert/alert.component';
 // import { LoginComponent } from './login/login.component';
@@ -41,6 +47,12 @@ import { AjoutUtilisateurComponent } from './utilisateur/ajout/ajout.component';
     DeleteMenuComponent,
     UtilisateurComponent,
     AjoutUtilisateurComponent,
+    DesertComponent,
+    DeleteDessertComponent,
+    AjoutDessertComponent,
+    BoissonComponent,
+    AjoutBoissonComponent,
+    DeleteBoissonComponent,
     // RegisterComponent,
     // LoginComponent
   ],

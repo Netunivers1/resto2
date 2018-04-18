@@ -82,7 +82,6 @@ body {
   overflow-x: hidden;
   color: #111212;
   font-weight: 300;
-  width: 102%;
 }
 
 html {
@@ -2329,7 +2328,7 @@ ul#themecolors {
 /*******************
  Footer
 *******************/
-.footer {
+/*.footer {
   bottom: 0;
   color: #67757c;
   left: 0px;
@@ -2337,7 +2336,7 @@ ul#themecolors {
   position: absolute;
   right: 0;
   border-top: 1px solid rgba(120, 130, 140, 0.13);
-  background: #ffffff; }
+  background: #ffffff; }*/
 
 /*******************
  Card title
@@ -6572,8 +6571,10 @@ File: scss
 @media (min-width: 1024px) {
   .page-wrapper {
     margin-left: 240px; }
-  .footer {
-    left: 240px; } }
+  /*.footer {
+    left: 240px; 
+  } */
+}
 
 @media (max-width: 1023px) {
   .page-wrapper {
@@ -6581,8 +6582,9 @@ File: scss
     -webkit-transition: 0.2s ease-in;
     -o-transition: 0.2s ease-in;
     transition: 0.2s ease-in; }
-  .footer {
-    left: 60px; }
+  /*.footer {
+    left: 60px; 
+  }*/
   .widget-app-columns {
     -webkit-column-count: 1;
     -moz-column-count: 1;

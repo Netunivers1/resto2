@@ -25,7 +25,7 @@ export class menuComponent implements OnInit {
 			.subscribe(
 				(data) => {
 					this.menus = data;
-					this.menusCharger = true;
+					this.menusCharger = (data.length > 0) ? true : false;
 				}
 			);			
 	}

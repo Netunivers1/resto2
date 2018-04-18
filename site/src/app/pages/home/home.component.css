@@ -1,3 +1,15 @@
+.bandeaurose {
+    background: #ebc9af;
+    text-align: center;
+    height: 50px;
+}
+
+div.bandeaurose > p {
+    padding-top: 13px;
+    font-family: unset;
+    letter-spacing: 2pt;
+}
+
 .commander {
     text-transform: uppercase;
     height: 40px;
@@ -70,7 +82,41 @@
     letter-spacing: normal;
 }
 
+.content_text {
+    position: relative;
+    top: 90px;    
+}
+
 .font_3 {
     font: normal normal normal 170px/1.4em 'playfair display',serif;
-    color: #2F2E2E;
+    color: #2F2E2E;   
+}
+
+.resto {
+    font: normal normal normal 25px/1.4em avenir-lt-w01_35-light1475496,sans-serif; 
+    text-align: center; 
+    color: #fff;
+    font-size: 30px;
+}
+
+.carte {
+    width: 10%;
+    text-align: center;
+    margin: auto;
+    background-color: #ebc9af;
+    font-size: 20px;
+    height: 40px;
+    cursor: pointer;
+    padding-top: 2px;
+}
+
+.carte:hover {
+    background-color: #d6915d;
+    color: #000 !important;
+}
+
+.parallax-plats {
+    background-image: url('slider_template_2.jpg');
+    height: 600px;
+    background-size: cover;
 }

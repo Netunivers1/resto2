@@ -25,7 +25,7 @@ export class PlatComponent implements OnInit {
 			.subscribe(
 				(data) => {
 					this.plats = data;
-					this.platsCharger = true;
+					this.platsCharger = (data.length > 0) ? true : false;
 				}
 			);			
 	}

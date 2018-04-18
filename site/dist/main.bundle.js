@@ -58,8 +58,8 @@ var AuthGuardService = /** @class */ (function () {
         return false;
     };
     AuthGuardService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["f" /* Router */]])
     ], AuthGuardService);
     return AuthGuardService;
 }());
@@ -120,7 +120,7 @@ var AlertComponent = /** @class */ (function () {
         this.alertService.getMessage().subscribe(function (message) { _this.message = message; });
     };
     AlertComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             // tslint:disable-next-line:component-selector
             selector: 'alert',
             template: __webpack_require__("../../../../../src/app/_directives/alert/alert.component.html"),
@@ -184,7 +184,7 @@ var AdminHeaderComponent = /** @class */ (function () {
         this.user = user.user;
     };
     AdminHeaderComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             // tslint:disable-next-line:component-selector
             selector: 'admin-header',
             template: __webpack_require__("../../../../../src/app/_layout/admin-header/admin-header.component.html"),
@@ -220,7 +220,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/_layout/admin-layout/admin-layout.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"main-wrapper\">\n\t<admin-header></admin-header>\n\t<admin-sidebar></admin-sidebar>\n\n\t<div class=\"page-wrapper\">\n\t    <!-- ============================================================== -->\n\t    <!-- Container fluid  -->\n\t    <!-- ============================================================== -->\n\t    <div class=\"container-fluid\">\n\t        <!-- ============================================================== -->\n\t        <!-- Bread crumb and right sidebar toggle -->\n\t        <!-- ============================================================== -->\n\t        <div class=\"row page-titles\">\n\t            <div class=\"col-md-5 col-8 align-self-center\">\n\t                <h3 class=\"text-themecolor\">Tableau de bord</h3>\n\t                <ol class=\"breadcrumb\">\n\t                    <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Accueil</a></li>\n\t                    <li class=\"breadcrumb-item active\">Tableau de bord</li>\n\t                </ol>\n\t            </div>\n\t        </div>\t\n\t\t\n\t\t\t<router-outlet></router-outlet>\n\n\t    </div>\n\t    <!-- ============================================================== -->\n\t    <!-- End Container fluid  -->\n\t    <!-- ============================================================== -->\n\t    <!-- ============================================================== -->\n\t    <!-- footer -->\n\t    <!-- ============================================================== -->\n\t    <footer class=\"footer\">\n\t\t\t© 2018 <strong>PAMF</strong> - Tous droits réservés - Création \n\t\t\t<a href=\"https://www.kook-agency.fr/\" target=\"blank\" title=\"Création Site Internet\">kook-agency.fr\n\t\t\t</a>\t    \t\n\t    </footer>\n\t    <!-- ============================================================== -->\n\t    <!-- End footer -->\n\t    <!-- ============================================================== -->\n\t</div>\t\n\n</div>"
+module.exports = "<div id=\"main-wrapper\">\n\t<admin-header></admin-header>\n\t<admin-sidebar></admin-sidebar>\n\n\t<div class=\"page-wrapper\">\n\t    <!-- ============================================================== -->\n\t    <!-- Container fluid  -->\n\t    <!-- ============================================================== -->\n\t    <div class=\"container-fluid\">\n\t        <!-- ============================================================== -->\n\t        <!-- Bread crumb and right sidebar toggle -->\n\t        <!-- ============================================================== -->\n\t        <div class=\"row page-titles\">\n\t            <div class=\"col-md-5 col-8 align-self-center\">\n\t                <h3 class=\"text-themecolor\">Tableau de bord</h3>\n\t                <ol class=\"breadcrumb\">\n\t                    <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Accueil</a></li>\n\t                    <li class=\"breadcrumb-item active\">Tableau de bord</li>\n\t                </ol>\n\t            </div>\n\t        </div>\t\n\t\t\n\t\t\t<router-outlet></router-outlet>\n\n\t    </div>\n\t    <!-- ============================================================== -->\n\t    <!-- End Container fluid  -->\n\t    <!-- ============================================================== -->\n\t    <!-- ============================================================== -->\n\t    <!-- footer -->\n\t    <!-- ============================================================== -->\n\t    <!-- <footer class=\"footer\">\n\t\t\t© 2018 <strong>PAMF</strong> - Tous droits réservés - Création \n\t\t\t<a href=\"https://www.kook-agency.fr/\" target=\"blank\" title=\"Création Site Internet\">kook-agency.fr\n\t\t\t</a>\t    \t\n\t    </footer> -->\n\t    <!-- ============================================================== -->\n\t    <!-- End footer -->\n\t    <!-- ============================================================== -->\n\t</div>\t\n\n</div>"
 
 /***/ }),
 
@@ -246,7 +246,7 @@ var AdminLayoutComponent = /** @class */ (function () {
     AdminLayoutComponent.prototype.ngOnInit = function () {
     };
     AdminLayoutComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-admin-layout',
             template: __webpack_require__("../../../../../src/app/_layout/admin-layout/admin-layout.component.html"),
             styles: [__webpack_require__("../../../../../src/app/_layout/admin-layout/admin-layout.component.css")]
@@ -281,7 +281,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/_layout/admin-sidebar/admin-sidebar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<aside class=\"left-sidebar\">\n    <!-- Sidebar scroll-->\n    <div class=\"scroll-sidebar\">\n        <!-- Sidebar navigation-->\n        <nav class=\"sidebar-nav\">\n            <ul id=\"sidebarnav\">\n                <li> \n                \t<a \n                \t\tclass=\"waves-effect waves-dark\" \n                \t\trouterLink=\"/admin\"\n                \t\taria-expanded=\"false\"\n                \t>\n                \t\t<i class=\"mdi mdi-gauge\"></i><span class=\"hide-menu\">Tableau de bord</span>\n                \t</a>\n                </li>\n                <li> \n                    <a \n                        class=\"waves-effect waves-dark\" \n                        routerLink=\"/admin/utilisateur\"\n                        aria-expanded=\"false\"\n                    >\n                        <i class=\"mdi mdi-account-check\"></i><span class=\"hide-menu\">Profil</span>\n                    </a>\n                </li>\n                <li> \n                    <a \n                        class=\"waves-effect waves-dark\" \n                        routerLink=\"/admin/menu/liste\"\n                        aria-expanded=\"false\"\n                    >\n                        <i class=\"mdi mdi-table\"></i><span class=\"hide-menu\">Menu</span>\n                    </a>\n                </li>\n                <li> \n                \t<a \n                \t\tclass=\"waves-effect waves-dark\" \n                \t\trouterLink=\"/admin/plat/liste\"\n                \t\taria-expanded=\"false\"\n                \t>\n                \t\t<i class=\"mdi mdi-table\"></i><span class=\"hide-menu\">Plat</span>\n                \t</a>\n                </li>\n            </ul>\n        </nav>\n        <!-- End Sidebar navigation -->\n    </div>\n    <!-- End Sidebar scroll-->\n    <!-- Bottom points-->\n    <div class=\"sidebar-footer\">\n        <!-- \n        <a href=\"\" class=\"link\" data-toggle=\"tooltip\" title=\"Configuration\">\n        \t<i class=\"ti-settings\"></i>\n        </a> \n        <a href=\"\" class=\"link\" data-toggle=\"tooltip\" title=\"Email\">\n        \t<i class=\"mdi mdi-gmail\"></i>\n        </a>\n        -->\n        <a \n            class=\"link\" \n            data-toggle=\"tooltip\" \n            title=\"Deconnexion\"\n            (click)=\"deconnexion()\"\n        >\n            <i class=\"mdi mdi-power\"></i>\n        </a> \n    </div>\n    <!-- End Bottom points-->\n</aside>\n"
+module.exports = "<aside class=\"left-sidebar\">\n    <!-- Sidebar scroll-->\n    <div class=\"scroll-sidebar\">\n        <!-- Sidebar navigation-->\n        <nav class=\"sidebar-nav\">\n            <ul id=\"sidebarnav\">\n                <li> \n                \t<a \n                \t\tclass=\"waves-effect waves-dark\" \n                \t\trouterLink=\"/admin\"\n                \t\taria-expanded=\"false\"\n                \t>\n                \t\t<i class=\"mdi mdi-gauge\"></i><span class=\"hide-menu\">Tableau de bord</span>\n                \t</a>\n                </li>\n                <li> \n                    <a \n                        class=\"waves-effect waves-dark\" \n                        routerLink=\"/admin/utilisateur\"\n                        aria-expanded=\"false\"\n                    >\n                        <i class=\"mdi mdi-account-check\"></i><span class=\"hide-menu\">Profil</span>\n                    </a>\n                </li>\n                <li> \n                    <a \n                        class=\"waves-effect waves-dark\" \n                        routerLink=\"/admin/menu/liste\"\n                        aria-expanded=\"false\"\n                    >\n                        <i class=\"mdi mdi-bulletin-board\"></i><span class=\"hide-menu\">Menu</span>\n                    </a>\n                </li>\n                <li> \n                    <a \n                        class=\"waves-effect waves-dark\" \n                        routerLink=\"/admin/plat/liste\"\n                        aria-expanded=\"false\"\n                    >\n                        <i class=\"mdi mdi-cards-playing-outline\"></i><span class=\"hide-menu\">Plat</span>\n                    </a>\n                </li>\n                <li> \n                    <a \n                        class=\"waves-effect waves-dark\" \n                        routerLink=\"/admin/dessert/liste\"\n                        aria-expanded=\"false\"\n                    >\n                        <i class=\"mdi mdi-beach\"></i><span class=\"hide-menu\">Dessert</span>\n                    </a>\n                </li>\n                <li> \n                \t<a \n                \t\tclass=\"waves-effect waves-dark\" \n                \t\trouterLink=\"/admin/boisson/liste\"\n                \t\taria-expanded=\"false\"\n                \t>\n                \t\t<i class=\"mdi mdi-beer\"></i><span class=\"hide-menu\">Boisson</span>\n                \t</a>\n                </li>\n            </ul>\n        </nav>\n        <!-- End Sidebar navigation -->\n    </div>\n    <!-- End Sidebar scroll-->\n    <!-- Bottom points-->\n    <div class=\"sidebar-footer\">\n        <!-- \n        <a href=\"\" class=\"link\" data-toggle=\"tooltip\" title=\"Configuration\">\n        \t<i class=\"ti-settings\"></i>\n        </a> \n        <a href=\"\" class=\"link\" data-toggle=\"tooltip\" title=\"Email\">\n        \t<i class=\"mdi mdi-gmail\"></i>\n        </a>\n        -->\n        <a \n            class=\"link\" \n            data-toggle=\"tooltip\" \n            title=\"Deconnexion\"\n            (click)=\"deconnexion()\"\n        >\n            <i class=\"mdi mdi-power\"></i>\n        </a> \n    </div>\n    <!-- End Bottom points-->\n</aside>\n"
 
 /***/ }),
 
@@ -314,13 +314,13 @@ var AdminSidebarComponent = /** @class */ (function () {
         this.router.navigate(['/']);
     };
     AdminSidebarComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             // tslint:disable-next-line:component-selector
             selector: 'admin-sidebar',
             template: __webpack_require__("../../../../../src/app/_layout/admin-sidebar/admin-sidebar.component.html"),
             styles: [__webpack_require__("../../../../../src/app/_layout/admin-sidebar/admin-sidebar.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["f" /* Router */]])
     ], AdminSidebarComponent);
     return AdminSidebarComponent;
 }());
@@ -350,7 +350,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/_layout/site-footer/site-footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <footer class=\"footer\" style=\"position: relative;\">\n\t\t© 2018 <strong>PAMF</strong> - Tous droits réservés - Création \n\t\t<a href=\"https://www.kook-agency.fr/\" target=\"blank\" title=\"Création Site Internet\">kook-agency.fr\n\t\t</a>\t    \t\n    </footer>\n</div>"
+module.exports = "<div class=\"footer_onepage\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<p style=\"text-align: center; padding-top: 10px;\">\n\t\t\t\t\t<a routerLink=\"/admin/dashboard\"> © 2018 KOOK AGENCY </a>\n\t\t\t\t</p>\t\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -376,7 +376,7 @@ var SiteFooterComponent = /** @class */ (function () {
     SiteFooterComponent.prototype.ngOnInit = function () {
     };
     SiteFooterComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'site-footer',
             template: __webpack_require__("../../../../../src/app/_layout/site-footer/site-footer.component.html"),
             styles: [__webpack_require__("../../../../../src/app/_layout/site-footer/site-footer.component.css")]
@@ -437,7 +437,7 @@ var SiteHeaderComponent = /** @class */ (function () {
     SiteHeaderComponent.prototype.ngOnInit = function () {
     };
     SiteHeaderComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             // tslint:disable-next-line:component-selector
             selector: 'site-header',
             template: __webpack_require__("../../../../../src/app/_layout/site-header/site-header.component.html"),
@@ -499,7 +499,7 @@ var SiteLayoutComponent = /** @class */ (function () {
     SiteLayoutComponent.prototype.ngOnInit = function () {
     };
     SiteLayoutComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-site-layout',
             template: __webpack_require__("../../../../../src/app/_layout/site-layout/site-layout.component.html"),
             styles: [__webpack_require__("../../../../../src/app/_layout/site-layout/site-layout.component.css")]
@@ -541,7 +541,7 @@ var AlertService = /** @class */ (function () {
         this.keepAfterNavigationChange = false;
         // clear alert message on route change
         router.events.subscribe(function (event) {
-            if (event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* NavigationStart */]) {
+            if (event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["e" /* NavigationStart */]) {
                 if (_this.keepAfterNavigationChange) {
                     // only keep for a single location change
                     _this.keepAfterNavigationChange = false;
@@ -567,8 +567,8 @@ var AlertService = /** @class */ (function () {
         return this.subject.asObservable();
     };
     AlertService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["f" /* Router */]])
     ], AlertService);
     return AlertService;
 }());
@@ -609,7 +609,7 @@ var AuthenticationService = /** @class */ (function () {
         localStorage.removeItem('accesUtilisateur');
     };
     AuthenticationService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], AuthenticationService);
     return AuthenticationService;
@@ -667,7 +667,7 @@ var UsersService = /** @class */ (function () {
         return this.http.post('http://jsonplaceholder.typicode.com/users', user);
     };
     UsersService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], UsersService);
     return UsersService;
@@ -720,7 +720,7 @@ var AppComponent = /** @class */ (function () {
         this.title = 'app';
     }
     AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-root',
             template: __webpack_require__("../../../../../src/app/app.component.html"),
             styles: [__webpack_require__("../../../../../src/app/app.component.css")]
@@ -745,32 +745,38 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__layout_site_layout_site_layout_component__ = __webpack_require__("../../../../../src/app/_layout/site-layout/site-layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__layout_admin_layout_admin_layout_component__ = __webpack_require__("../../../../../src/app/_layout/admin-layout/admin-layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__layout_admin_header_admin_header_component__ = __webpack_require__("../../../../../src/app/_layout/admin-header/admin-header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__layout_site_footer_site_footer_component__ = __webpack_require__("../../../../../src/app/_layout/site-footer/site-footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__layout_site_header_site_header_component__ = __webpack_require__("../../../../../src/app/_layout/site-header/site-header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_home_home_component__ = __webpack_require__("../../../../../src/app/pages/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_presentation_presentation_component__ = __webpack_require__("../../../../../src/app/pages/presentation/presentation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__layout_admin_sidebar_admin_sidebar_component__ = __webpack_require__("../../../../../src/app/_layout/admin-sidebar/admin-sidebar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__directives_alert_alert_component__ = __webpack_require__("../../../../../src/app/_directives/alert/alert.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_index__ = __webpack_require__("../../../../../src/app/_services/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__auth_auth_guard_service__ = __webpack_require__("../../../../../src/app/_auth/auth-guard.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_table_users_service__ = __webpack_require__("../../../../../src/app/_services/table/users.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__register_register_component__ = __webpack_require__("../../../../../src/app/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_contact_contact_component__ = __webpack_require__("../../../../../src/app/pages/contact/contact.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_onepage_onepage_component__ = __webpack_require__("../../../../../src/app/pages/onepage/onepage.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_menu_menu_component__ = __webpack_require__("../../../../../src/app/pages/menu/menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_plat_plat_component__ = __webpack_require__("../../../../../src/app/pages/plat/plat.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_parallaxscroll__ = __webpack_require__("../../../../ng2-parallaxscroll/modules/ng2-parallaxscroll.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__layout_site_layout_site_layout_component__ = __webpack_require__("../../../../../src/app/_layout/site-layout/site-layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__layout_admin_layout_admin_layout_component__ = __webpack_require__("../../../../../src/app/_layout/admin-layout/admin-layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__layout_admin_header_admin_header_component__ = __webpack_require__("../../../../../src/app/_layout/admin-header/admin-header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__layout_site_footer_site_footer_component__ = __webpack_require__("../../../../../src/app/_layout/site-footer/site-footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__layout_site_header_site_header_component__ = __webpack_require__("../../../../../src/app/_layout/site-header/site-header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_home_home_component__ = __webpack_require__("../../../../../src/app/pages/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_presentation_presentation_component__ = __webpack_require__("../../../../../src/app/pages/presentation/presentation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__layout_admin_sidebar_admin_sidebar_component__ = __webpack_require__("../../../../../src/app/_layout/admin-sidebar/admin-sidebar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__directives_alert_alert_component__ = __webpack_require__("../../../../../src/app/_directives/alert/alert.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_index__ = __webpack_require__("../../../../../src/app/_services/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__auth_auth_guard_service__ = __webpack_require__("../../../../../src/app/_auth/auth-guard.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_table_users_service__ = __webpack_require__("../../../../../src/app/_services/table/users.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__register_register_component__ = __webpack_require__("../../../../../src/app/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_contact_contact_component__ = __webpack_require__("../../../../../src/app/pages/contact/contact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_onepage_onepage_component__ = __webpack_require__("../../../../../src/app/pages/onepage/onepage.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_menu_menu_component__ = __webpack_require__("../../../../../src/app/pages/menu/menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_plat_plat_component__ = __webpack_require__("../../../../../src/app/pages/plat/plat.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_dessert_dessert_component__ = __webpack_require__("../../../../../src/app/pages/dessert/dessert.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_boisson_boisson_component__ = __webpack_require__("../../../../../src/app/pages/boisson/boisson.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -804,49 +810,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 // import { JwtInterceptor } from './_helpers';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_13__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__layout_site_layout_site_layout_component__["a" /* SiteLayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__layout_admin_layout_admin_layout_component__["a" /* AdminLayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_presentation_presentation_component__["a" /* PresentationComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__layout_admin_header_admin_header_component__["a" /* AdminHeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__layout_site_footer_site_footer_component__["a" /* SiteFooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__layout_site_header_site_header_component__["a" /* SiteHeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__layout_admin_sidebar_admin_sidebar_component__["a" /* AdminSidebarComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__directives_alert_alert_component__["a" /* AlertComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__register_register_component__["a" /* RegisterComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_contact_contact_component__["a" /* ContactComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_onepage_onepage_component__["a" /* OnepageComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_menu_menu_component__["a" /* menuComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_plat_plat_component__["a" /* PlatComponent */]
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__layout_site_layout_site_layout_component__["a" /* SiteLayoutComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__layout_admin_layout_admin_layout_component__["a" /* AdminLayoutComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_presentation_presentation_component__["a" /* PresentationComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__layout_admin_header_admin_header_component__["a" /* AdminHeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__layout_site_footer_site_footer_component__["a" /* SiteFooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__layout_site_header_site_header_component__["a" /* SiteHeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__layout_admin_sidebar_admin_sidebar_component__["a" /* AdminSidebarComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__directives_alert_alert_component__["a" /* AlertComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__register_register_component__["a" /* RegisterComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_contact_contact_component__["a" /* ContactComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_onepage_onepage_component__["a" /* OnepageComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_menu_menu_component__["a" /* menuComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_plat_plat_component__["a" /* PlatComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__pages_dessert_dessert_component__["a" /* DessertComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__pages_boisson_boisson_component__["a" /* BoissonComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 // PagesModule,
-                __WEBPACK_IMPORTED_MODULE_7__app_routing__["a" /* routing */],
+                __WEBPACK_IMPORTED_MODULE_9__app_routing__["a" /* routing */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_4__angular_http__["c" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_5__agm_core__["a" /* AgmCoreModule */].forRoot({
                     apiKey: 'AIzaSyCZeDurG5gamvy7AGTl-zerIuq-kzoNrRc'
-                })
+                }),
+                __WEBPACK_IMPORTED_MODULE_7_ng2_parallaxscroll__["a" /* ParallaxScrollModule */],
+                __WEBPACK_IMPORTED_MODULE_8_ng2_page_scroll__["a" /* Ng2PageScrollModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_19__auth_auth_guard_service__["a" /* AuthGuardService */],
-                __WEBPACK_IMPORTED_MODULE_18__services_index__["a" /* AlertService */],
-                __WEBPACK_IMPORTED_MODULE_18__services_index__["b" /* AuthenticationService */],
-                __WEBPACK_IMPORTED_MODULE_20__services_table_users_service__["a" /* UsersService */],
+                __WEBPACK_IMPORTED_MODULE_21__auth_auth_guard_service__["a" /* AuthGuardService */],
+                __WEBPACK_IMPORTED_MODULE_20__services_index__["a" /* AlertService */],
+                __WEBPACK_IMPORTED_MODULE_20__services_index__["b" /* AuthenticationService */],
+                __WEBPACK_IMPORTED_MODULE_22__services_table_users_service__["a" /* UsersService */],
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_13__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -912,7 +924,7 @@ var appRoutes = [
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
-var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["d" /* RouterModule */].forRoot(appRoutes);
+var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["g" /* RouterModule */].forRoot(appRoutes);
 
 
 /***/ }),
@@ -923,6 +935,7 @@ var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["d" /* RouterModule 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return urlApi; });
 var host = 'https://aretmic.com/api/resto2/web/app_dev.php';
+//const host = 'http://localhost/net_api/web/app_dev.php';
 var urlApi = host;
 
 
@@ -1019,18 +1032,93 @@ var LoginComponent = /** @class */ (function () {
         });
     };
     LoginComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             // selector: 'app-login',
             moduleId: module.i.toString(),
             template: __webpack_require__("../../../../../src/app/login/login.component.html"),
             styles: [__webpack_require__("../../../../../src/app/login/login.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["f" /* Router */],
             __WEBPACK_IMPORTED_MODULE_2__services_authentication_service__["a" /* AuthenticationService */],
             __WEBPACK_IMPORTED_MODULE_3__services_alert_service__["a" /* AlertService */]])
     ], LoginComponent);
     return LoginComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/boisson/boisson.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#overlay {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(0,0,0,0.5);\n    z-index: 2;\n    cursor: pointer;\n    display: block;\n}\n\n#text {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    font-size: 20px;\n    color: white;\n    -webkit-transform: translate(-50%,-50%);\n            transform: translate(-50%,-50%);\n    -ms-transform: translate(-50%,-50%);\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/boisson/boisson.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\" style=\"padding-top: 40px; padding-bottom: 20px;\">\n    <div id=\"overlay\" *ngIf=\"!boissonsCharger;\">\n        <div id=\"text\">Chargement des boissons en cours...</div>\n    </div> \n\n    <div class=\"row\" style=\"margin-bottom: 20px;\" >\n        <div class=\"col-md-6\">            \n        </div>\n        <div class=\"col-md-3\">\n            <h2>33cl</h2>\n        </div>\n        <div class=\"col-md-3\">\n            <h2>50cl</h2>\n        </div>\n    </div>\n\n    <div class=\"row\" *ngFor=\"let i of boissons\" style=\"margin-bottom: 20px;\" >\n        <div class=\"col-md-6\">  \n        \t<p>{{i.nom | uppercase}}</p>          \n        </div>\n        <div class=\"col-md-3\">\n            <p>{{i.pm}}</p>\n        </div>\n        <div class=\"col-md-3\">\n            <p>{{i.gm}}</p>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/boisson/boisson.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BoissonComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_host__ = __webpack_require__("../../../../../src/app/config/host.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BoissonComponent = /** @class */ (function () {
+    function BoissonComponent(http) {
+        this.http = http;
+        this.boissonsCharger = false;
+    }
+    BoissonComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/boisson';
+        this.http.get(url)
+            .map(function (response) { return response.json(); })
+            .subscribe(function (data) {
+            _this.boissons = data;
+            _this.boissonsCharger = (data.length > 0) ? true : false;
+        });
+    };
+    BoissonComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-boisson',
+            template: __webpack_require__("../../../../../src/app/pages/boisson/boisson.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/boisson/boisson.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    ], BoissonComponent);
+    return BoissonComponent;
 }());
 
 
@@ -1086,7 +1174,7 @@ var ContactComponent = /** @class */ (function () {
     ContactComponent.prototype.ngOnInit = function () {
     };
     ContactComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-contact',
             template: __webpack_require__("../../../../../src/app/pages/contact/contact.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/contact/contact.component.css")]
@@ -1100,7 +1188,7 @@ var ContactComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/home/home.component.css":
+/***/ "../../../../../src/app/pages/dessert/dessert.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -1108,7 +1196,83 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".commander {\n    text-transform: uppercase;\n    height: 40px;\n    border: 1px solid;\n    width: 150px;\n    margin: auto;\n    padding-top: 6px;\n    cursor: pointer;\t\n}\n\n.commander:hover {\n\tbackground: black;\n\tcolor: white;\n}\n\n.strc1 {\n\tposition: absolute; \n\ttop: 0px; \n\twidth: calc((((100vw - 15px) - 0px) * 1) + 1px); \n\theight: 100%; \n\tpointer-events: auto; l\n\teft: calc((((((100vw - 15px) - 0px) * 1) - 980px) * -0.5) - 1px); \n\tbottom: 0px; \n\toverflow: hidden; clip: rect(0px 1299px 50px 0px);\t\n}\n\n.strc2 {\n\twidth: 100%; \n\theight: 100%; \n\tbackground-color: rgb(235, 201, 175); \n\tposition: absolute;\n}\n\n.strc3 {\n\tposition: absolute; \n\twidth: 980px; \n\ttop: 0px; \n\tbottom: 0px; \n\tleft: calc((100% - 980px) * 0.5);\t\n}\n\n.txtNew p {\n    margin: 0;\n    line-height: normal;\n    letter-spacing: normal;\n}\n\n.font_9 {\n    font: normal normal normal 19px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;\n    color: #605E5E;\n}\n\n.color_15 {\n    color: #2F2E2E;\n}\n\n.txtNew > * {\n    pointer-events: auto;\n}\n\n.txtNew {\n    word-wrap: break-word;\n    text-align: start;\n    pointer-events: none;\n}\n\n.txtNew h3 {\n    margin: 0;\n    line-height: normal;\n    letter-spacing: normal;\n}\n\n.font_3 {\n    font: normal normal normal 170px/1.4em 'playfair display',serif;\n    color: #2F2E2E;\n}", ""]);
+exports.push([module.i, "#overlay {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(0,0,0,0.5);\n    z-index: 2;\n    cursor: pointer;\n    display: block;\n}\n\n#text {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    font-size: 20px;\n    color: white;\n    -webkit-transform: translate(-50%,-50%);\n            transform: translate(-50%,-50%);\n    -ms-transform: translate(-50%,-50%);\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/dessert/dessert.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container-fluid\" style=\"padding-top: 40px; padding-bottom: 20px;\">\n    <div id=\"overlay\" *ngIf=\"!dessertsCharger;\">\n        <div id=\"text\">Chargement des desserts en cours...</div>\n    </div> \n\n    <div class=\"row\" *ngFor=\"let i of desserts\" style=\"margin-bottom: 20px;\" >\n        <div class=\"col-md-2\">            \n        </div>\n\n        <div class=\"col-md-6\">\n            <h2>{{i.nom | uppercase}}</h2>\n            <p>{{i.ingredient}}</p>\n        </div>\n        <div class=\"col-md-2\">\n            {{i.prix}}\n        </div>\n\n        <div class=\"col-md-2\">            \n        </div>\n    </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/dessert/dessert.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DessertComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_host__ = __webpack_require__("../../../../../src/app/config/host.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var DessertComponent = /** @class */ (function () {
+    function DessertComponent(http) {
+        this.http = http;
+        this.dessertsCharger = false;
+    }
+    DessertComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__config_host__["a" /* urlApi */] + '/dessert';
+        this.http.get(url)
+            .map(function (response) { return response.json(); })
+            .subscribe(function (data) {
+            _this.desserts = data;
+            _this.dessertsCharger = (data.length > 0) ? true : false;
+        });
+    };
+    DessertComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-dessert',
+            template: __webpack_require__("../../../../../src/app/pages/dessert/dessert.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/dessert/dessert.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    ], DessertComponent);
+    return DessertComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/home/home.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+var escape = __webpack_require__("../../../../css-loader/lib/url/escape.js");
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".bandeaurose {\n    background: #ebc9af;\n    text-align: center;\n    height: 50px;\n}\n\ndiv.bandeaurose > p {\n    padding-top: 13px;\n    font-family: unset;\n    letter-spacing: 2pt;\n}\n\n.commander {\n    text-transform: uppercase;\n    height: 40px;\n    border: 1px solid;\n    width: 150px;\n    margin: auto;\n    padding-top: 6px;\n    cursor: pointer;\t\n}\n\n.commander:hover {\n\tbackground: black;\n\tcolor: white;\n}\n\n.strc1 {\n\tposition: absolute; \n\ttop: 0px; \n\twidth: calc((((100vw - 15px) - 0px) * 1) + 1px); \n\theight: 100%; \n\tpointer-events: auto; l\n\teft: calc((((((100vw - 15px) - 0px) * 1) - 980px) * -0.5) - 1px); \n\tbottom: 0px; \n\toverflow: hidden; clip: rect(0px 1299px 50px 0px);\t\n}\n\n.strc2 {\n\twidth: 100%; \n\theight: 100%; \n\tbackground-color: rgb(235, 201, 175); \n\tposition: absolute;\n}\n\n.strc3 {\n\tposition: absolute; \n\twidth: 980px; \n\ttop: 0px; \n\tbottom: 0px; \n\tleft: calc((100% - 980px) * 0.5);\t\n}\n\n.txtNew p {\n    margin: 0;\n    line-height: normal;\n    letter-spacing: normal;\n}\n\n.font_9 {\n    font: normal normal normal 19px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;\n    color: #605E5E;\n}\n\n.color_15 {\n    color: #2F2E2E;\n}\n\n.txtNew > * {\n    pointer-events: auto;\n}\n\n.txtNew {\n    word-wrap: break-word;\n    text-align: start;\n    pointer-events: none;\n}\n\n.txtNew h3 {\n    margin: 0;\n    line-height: normal;\n    letter-spacing: normal;\n}\n\n.content_text {\n    position: relative;\n    top: 90px;    \n}\n\n.font_3 {\n    font: normal normal normal 170px/1.4em 'playfair display',serif;\n    color: #2F2E2E;   \n}\n\n.resto {\n    font: normal normal normal 25px/1.4em avenir-lt-w01_35-light1475496,sans-serif; \n    text-align: center; \n    color: #fff;\n    font-size: 30px;\n}\n\n.carte {\n    width: 10%;\n    text-align: center;\n    margin: auto;\n    background-color: #ebc9af;\n    font-size: 20px;\n    height: 40px;\n    cursor: pointer;\n    padding-top: 2px;\n}\n\n.carte:hover {\n    background-color: #d6915d;\n    color: #000 !important;\n}\n\n.parallax-plats {\n    background-image: url(" + escape(__webpack_require__("../../../../../src/app/pages/home/slider_template_2.jpg")) + ");\n    height: 600px;\n    background-size: cover;\n}", ""]);
 
 // exports
 
@@ -1121,7 +1285,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div \n    data-enable-video=\"true\" \n    class=\"strc1balata strc1\" \n    id=\"mediairacv4bo1balata\" \n>\n    <div class=\"bgColor strc2\" id=\"mediairacv4bo1balatabgcolor\">\n        <div id=\"mediairacv4bo1balatabgcoloroverlay\" class=\"bgColoroverlay\" style=\"width: 100%; height: 100%; position: absolute;\">\n\n            <div \n                id=\"mediairacv4bo1inlineContent\" \n                class=\"strc1inlineContent strc3\" \n            >\n                <div \n                    data-packed=\"true\" \n                    class=\"txtNew\" \n                    id=\"comp-ir26vyqc\" \n                    style=\"left: 0px; width: 980px; position: absolute; top: 9px;\">\n                    <p class=\"font_9\" style=\"line-height:1.8em; text-align:center;\">\n                        <span class=\"color_15\">\n                            24 avenue Marceau , 75008&nbsp;Paris&nbsp; &nbsp; |&nbsp; 01 75 88 99 00 |&nbsp; Ouvert de 11 h à 15 h et de 18h à 23h30&nbsp;\n                        </span>\n                    </p>\n                </div>\n            </div>\n\n        </div>\n    </div>\n</div>\n\n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-md-12\" style=\"text-align: center; margin-top: 5px; \">\n            <div \n                data-packed=\"true\" \n                class=\"txtNew\" \n                id=\"comp-ikmo799g\" \n                style=\"left: 65px; width: 850px; position: absolute; top: 230px;\">\n                <h3 class=\"font_3\" style=\"line-height:0.9em; text-align:center;\">\n                    <span style=\"color:#FAFAFA;\">\n                        <span style=\"letter-spacing:-0.05em;\">DaKoTa</span>\n                    </span>\n                </h3>\n            </div>\n            <div \n                data-packed=\"true\" \n                class=\"txtNew\" \n                id=\"comp-ikpj53mv\" \n                style=\"left: 266px; width: 447px; position: absolute; top: 411px;\"\n            >\n                <h5 class=\"font_5\" style=\"line-height:1.6em; text-align:center;\">\n                    <span style=\"letter-spacing:0.1em;\">\n                        <span class=\"color_11\">Restaurant</span>\n                    </span>\n                </h5>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"bandeaurose\">\n    <p>\n        24 avenue Marceau , 75008 Paris    |  01 75 88 99 00 |  Ouvert de 11 h à 15 h et de 18h à 23h30\n    </p>\n</div>\n\n<div parallax class=\"parallax-plats\" [config]=\"{axis: X, speed: -.2}\">\n    <div class=\"content_text\">\n        <h3 class=\"font_3\" style=\"line-height:0.9em; text-align:center;\">\n            <span style=\"color:#FAFAFA;\">\n                <span style=\"letter-spacing:-0.05em;\">DaKoTa</span>\n            </span>\n        </h3>\n        <br><br>\n        <p class=\"resto\">\n            Restaurant\n        </p>\n        <br><br><br>\n        <p class=\"carte\">\n            La Carte\n        </p>\n    </div>\n</div>\n\n<!-- <div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-md-12\" style=\"text-align: center; margin-top: 5px; \">\n            <div \n                data-packed=\"true\" \n                class=\"txtNew\" \n                id=\"comp-ikmo799g\" \n                style=\"left: 65px; width: 850px; position: absolute; top: 230px;\">\n                <h3 class=\"font_3\" style=\"line-height:0.9em; text-align:center;\">\n                    <span style=\"color:#FAFAFA;\">\n                        <span style=\"letter-spacing:-0.05em;\">DaKoTa</span>\n                    </span>\n                </h3>\n            </div>\n            <div \n                data-packed=\"true\" \n                class=\"txtNew\" \n                id=\"comp-ikpj53mv\" \n                style=\"left: 266px; width: 447px; position: absolute; top: 411px;\"\n            >\n                <h5 class=\"font_5\" style=\"line-height:1.6em; text-align:center;\">\n                    <span style=\"letter-spacing:0.1em;\">\n                        <span class=\"color_11\">Restaurant</span>\n                    </span>\n                </h5>\n            </div>\n        </div>\n    </div>\n</div> -->"
 
 /***/ }),
 
@@ -1147,7 +1311,7 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent.prototype.ngOnInit = function () {
     };
     HomeComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-home',
             template: __webpack_require__("../../../../../src/app/pages/home/home.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/home/home.component.css")]
@@ -1158,6 +1322,13 @@ var HomeComponent = /** @class */ (function () {
 }());
 
 
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/home/slider_template_2.jpg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "slider_template_2.b4840c1ac224800091b2.jpg";
 
 /***/ }),
 
@@ -1182,7 +1353,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/menu/menu.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\" style=\"padding-top: 40px; padding-bottom: 20px;\">\n    <div id=\"overlay\" *ngIf=\"!menusCharger;\">\n        <div id=\"text\">Chargement des boissons en cours...</div>\n    </div> \n\n    <div class=\"row\" *ngFor=\"let i of menus\" style=\"margin-bottom: 20px;\" >\n        <div class=\"col-md-2\">            \n        </div>\n\n        <div class=\"col-md-6\">\n            <h2>{{i.nom | uppercase}}</h2>\n            <p>{{i.ingredient}}</p>\n        </div>\n        <div class=\"col-md-2\">\n            {{i.prix}}\n        </div>\n\n        <div class=\"col-md-2\">            \n        </div>\n    </div>\n</div>\n"
+module.exports = "<div class=\"container-fluid\" style=\"padding-top: 40px; padding-bottom: 20px;\">\n    <div id=\"overlay\" *ngIf=\"!menusCharger;\">\n        <div id=\"text\">Chargement des entrées en cours...</div>\n    </div> \n\n    <div class=\"row\" *ngFor=\"let i of menus\" style=\"margin-bottom: 20px;\" >\n        <div class=\"col-md-2\">            \n        </div>\n\n        <div class=\"col-md-6\">\n            <h2>{{i.nom | uppercase}}</h2>\n            <p>{{i.ingredient}}</p>\n        </div>\n        <div class=\"col-md-2\">\n            {{i.prix}}\n        </div>\n\n        <div class=\"col-md-2\">            \n        </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -1218,11 +1389,11 @@ var menuComponent = /** @class */ (function () {
             .map(function (response) { return response.json(); })
             .subscribe(function (data) {
             _this.menus = data;
-            _this.menusCharger = true;
+            _this.menusCharger = (data.length > 0) ? true : false;
         });
     };
     menuComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-menu',
             template: __webpack_require__("../../../../../src/app/pages/menu/menu.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/menu/menu.component.css")]
@@ -1236,6 +1407,27 @@ var menuComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/pages/onepage/boisson.webp":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "boisson.20d5e156c4d79e1bb42d.webp";
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/onepage/entree.webp":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "entree.13116cbd636e0f7b5240.webp";
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/onepage/nos_desserts.jpg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "nos_desserts.0bfaf1d4c1f9578aa988.jpg";
+
+/***/ }),
+
 /***/ "../../../../../src/app/pages/onepage/onepage.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1245,7 +1437,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* Styles go here */\n* { -webkit-box-sizing: border-box; box-sizing: border-box};\nlegend {background-color: #fff};\nul {list-style: none}\nul li {display: inline-block; border: 1px solid #999; padding: 10px; cursor: pointer;}\nul li.current { background: #333; color: #fff}\n.scrollable { \n  height: 200px; \n  border: 1px solid #999; \n  position: relative;\n}\n/*.scrollable > div:nth-child(odd) { background-color: #ccc}*/\nul.window {\n  position: fixed; \n  top: 0; \n  left: 0; \n  background: yellow; \n  z-index: 1;\n}\nul.window li {display: block; }\n.scrollable.section {\n  overflow:auto;\n  height: 600px;\n}\n.horizontal {\n  height: 100px;\n  width: 100%;\n  max-width: 450px;\n  white-space: nowrap;\n  overflow-y: hidden !important;\n}\n.horizontal > div {\n  border: 1px solid #666;\n  width: 200px;\n  height: 800px;\n  display: inline-block;\n  text-align: center;\n}\n.menu {\n    height: 60px;\n    background: #fff;\n    padding-top: 15px;\n    z-index: 9999;\n    width: 100%;    \n}\n.menu a {\n    cursor: pointer;\n    color: #000;\n}\n.menu a:hover {\n    cursor: pointer;\n    color: #A0A09F;\n}\n#s1 {\n  -webkit-box-shadow:inset 0 0 0 100px rgba(0,0,0,0.5);\n          box-shadow:inset 0 0 0 100px rgba(0,0,0,0.5);\n  background: url(" + escape(__webpack_require__("../../../../../src/app/pages/onepage/slider_template_2.jpg")) + ");\n  background-size: cover;\n  height: 600px;\n}\n#s2 {\n  height: auto;\n}\n#s3 {\n  background: url('https://static.wixstatic.com/media/240bc5b15f4e4f4582996cf6b0d6ab8f.jpg/v1/fill/w_1299,h_343,al_c,q_85,usm_0.66_1.00_0.01/240bc5b15f4e4f4582996cf6b0d6ab8f.webp');\n  -webkit-box-shadow:inset 0 0 0 100px rgba(0,0,0,0.5);\n          box-shadow:inset 0 0 0 100px rgba(0,0,0,0.5);\n  height: 200px;\n}\n#plat {\n  background: url('https://static.wixstatic.com/media/b1081b44801546e0b25bb0261591fb76.jpg/v1/fill/w_1299,h_343,al_c,q_85,usm_0.66_1.00_0.01/b1081b44801546e0b25bb0261591fb76.webp');\n  -webkit-box-shadow:inset 0 0 0 100px rgba(0,0,0,0.5);\n          box-shadow:inset 0 0 0 100px rgba(0,0,0,0.5);\n  height: 200px;  \n}\n/*Pour la section accueil*/\n.txtNew {\n    word-wrap: break-word;\n    text-align: start;\n    pointer-events: none;\n}\n.txtNew h3 {\n    margin: 0;\n    line-height: normal;\n    letter-spacing: normal;\n}\n.color_32 {\n    color: #FFC880;\n}\n.font_3 {\n    font: normal normal normal 58px/1.4em impact,impact-w01-2010,impact-w02-2010,impact-w10-2010,sans-serif;\n    color: #222222;\n}\n/*Fin pour la section accueil*/\n.font_4 {\n    font: normal normal normal 84px/1.4em 'playfair display',serif;\n    color: #2F2E2E;\n    color: #fff;\n    text-align: center;\n}", ""]);
+exports.push([module.i, "/* Styles go here */\n.menu {\n    height: 60px;\n    background: #fff;\n    padding-top: 15px;\n    z-index: 9999;\n    width: 100%;\n    position: fixed;\n}\n.menu a {\n    cursor: pointer;\n    color: #000;\n}\n.menu a:hover {\n    cursor: pointer;\n    color: #A0A09F;\n}\n#content {\n    padding-top: 60px; \n}\n#presentation {\n    height: auto;\n}\n.parallax-entrees {\n    background-image: url(" + escape(__webpack_require__("../../../../../src/app/pages/onepage/entree.webp")) + ");\n    height: 300px;\n    background-size: cover;\n}\n.parallax-plats {\n    background-image: url(" + escape(__webpack_require__("../../../../../src/app/pages/onepage/plat.webp")) + ");\n    height: 300px;\n    background-size: cover;\n}\n.parallax-desserts {\n    background-image: url(" + escape(__webpack_require__("../../../../../src/app/pages/onepage/nos_desserts.jpg")) + ");\n    height: 300px;\n    background-size: cover;\n}\n.parallax-boissons {\n    background-image: url(" + escape(__webpack_require__("../../../../../src/app/pages/onepage/boisson.webp")) + ");\n    height: 300px;\n    background-size: cover;\n}\n/*Pour la section accueil*/\n.txtNew {\n    word-wrap: break-word;\n    text-align: start;\n    pointer-events: none;\n}\n.txtNew h3 {\n    margin: 0;\n    line-height: normal;\n    letter-spacing: normal;\n}\n.color_32 {\n    color: #FFC880;\n}\n.font_3 {\n    font: normal normal normal 58px/1.4em impact,impact-w01-2010,impact-w02-2010,impact-w10-2010,sans-serif;\n    color: #222222;\n}\n/*Fin pour la section accueil*/\n.font_4 {\n    font: normal normal normal 84px/1.4em 'playfair display',serif;\n    color: #2F2E2E;\n    color: #fff;\n    text-align: center;\n    padding-top: 60px;\n}", ""]);
 
 // exports
 
@@ -1258,7 +1450,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/onepage/onepage.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Menu -->\n<div class=\"menu\">\n\t<div class=\"container-fluid\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-2\">\n\t\t\t\t<a \n\t\t\t\t\ttarget=\"_self\" \n\t\t\t\t\trole=\"button\" \n\t\t\t\t\tid=\"comp-itb5kbcnlink\" \n\t\t\t\t\tclass=\"b4link\"\n\t\t\t\t\tstyle=\"margin-left: 20px;\" \n\t\t\t\t\t(click)=\"scrollTo('#s'+1, '#v-scrollable')\"\n\t\t\t\t>\n\t\t\t\t\t<span \n\t\t\t\t\t\tid=\"comp-itb5kbcnlabel\" \n\t\t\t\t\t\tclass=\"b4label\"\n\t\t\t\t\t\tstyle=\"font: normal normal normal 25px/1.4em 'playfair display',serif;\" \n\t\t\t\t\t>\n\t\t\t\t\t\tLe Dakota\n\t\t\t\t\t</span>\n\t\t\t\t</a>\t\t\t\t\n\t\t\t</div>\n\t\t\t<div class=\"col-md-8\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t<div class=\"col-md-2\">\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t\t\t\t\t<a \n\t\t\t\t\t\t\t\t\t\tclass=\"pull-left\"\n\t\t\t\t\t\t\t\t\t\t(click)=\"scrollTo('#s'+1, '#v-scrollable')\"\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\tACCUEILL\n\t\t\t\t\t\t\t\t\t</a>\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t\t\t\t\t<a \n\t\t\t\t\t\t\t\t\t\tclass=\"text-center\"\n\t\t\t\t\t\t\t\t\t\t(click)=\"scrollTo('#s'+2, '#v-scrollable')\"\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\tPRESENTATION\n\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t\t\t\t\t<a \n\t\t\t\t\t\t\t\t\t\tclass=\"pull-right\"\n\t\t\t\t\t\t\t\t\t\t(click)=\"scrollTo('#s'+3, '#v-scrollable')\"\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\tMENU\n\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t\t\t\t\t<a \n\t\t\t\t\t\t\t\t\t\tclass=\"pull-right\"\n\t\t\t\t\t\t\t\t\t\t(click)=\"scrollTo('#s'+4, '#v-scrollable')\"\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\tCONTACT\n\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"col-md-2\">\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-2\">\n\t\t\t\t<a \n\t\t\t\t\trouterLink=\"/admin/dashboard\" \n\t\t\t\t\tclass=\"btn btn-success pull-right\"\n\t\t\t\t\tstyle=\"background: green; border: 1px solid green;\" \n\t\t\t\t>\n\t\t\t\t\tAdmninstration\n\t\t\t\t</a>\n\t\t\t</div>\t\t\t\t\n\t\t</div>\n\t</div>\n</div>\n<!-- Fin menu -->\n\n<div \n\tid=\"v-scrollable\" \n\tclass=\"scrollable section\"\n\tng2-scrollable (elementVisible)=\"scrollEvent()\"\n>\n\n\t<div id=\"s1\">\n\t\t<app-home></app-home>\n\t</div>\n\n\t<div id=\"s2\">\n\t\t<app-presentation></app-presentation>\n\t</div>\n\t\n\t<div id=\"s3\">\n\t\t<h4 class=\"font_4\">\n\t\t\tNos entrées\n\t\t</h4>\n\t</div>\t\n\t<app-menu></app-menu>\n\n\t<div id=\"plat\">\n\t\t<h4 class=\"font_4\">\n\t\t\tNos plats\n\t\t</h4>\n\t</div>\n\t<app-plat></app-plat>\t\n\n\t<div id=\"s4\" style=\"background: #e8e8e8;\">\n\t\t<app-contact></app-contact>\n\t</div>\n\n</div>"
+module.exports = "<!-- Menu -->\n<div class=\"menu\">\n\t<div class=\"container-fluid\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-2\">\n\t\t\t\t<a \n\t\t\t\t\ttarget=\"_self\" \n\t\t\t\t\trole=\"button\" \n\t\t\t\t\tid=\"comp-itb5kbcnlink\" \n\t\t\t\t\tclass=\"b4link\"\n\t\t\t\t\tstyle=\"margin-left: 20px;\" \n\t\t\t\t\t(click)=\"goTo('#home')\"\n\t\t\t\t>\n\t\t\t\t\t<span \n\t\t\t\t\t\tid=\"comp-itb5kbcnlabel\" \n\t\t\t\t\t\tclass=\"b4label\"\n\t\t\t\t\t\tstyle=\"font: normal normal normal 25px/1.4em 'playfair display',serif;\" \n\t\t\t\t\t>\n\t\t\t\t\t\tLe Dakota\n\t\t\t\t\t</span>\n\t\t\t\t</a>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-8\">\n\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t<div class=\"col-md-2\">\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t\t\t\t\t<a \n\t\t\t\t\t\t\t\t\t\tclass=\"pull-left\"\n\t\t\t\t\t\t\t\t\t\t(click)=\"goTo('#home')\"\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\tACCUEIL\n\t\t\t\t\t\t\t\t\t</a>\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t\t\t\t\t<a \n\t\t\t\t\t\t\t\t\t\tclass=\"text-center\"\n\t\t\t\t\t\t\t\t\t\t(click)=\"goTo('#presentation')\"\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\tPRESENTATION\n\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t\t\t\t\t<a \n\t\t\t\t\t\t\t\t\t\tclass=\"pull-right\"\n\t\t\t\t\t\t\t\t\t\t(click)=\"goTo('#menu')\"\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\tMENU\n\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t\t\t\t\t<a \n\t\t\t\t\t\t\t\t\t\tclass=\"pull-right\"\n\t\t\t\t\t\t\t\t\t\t(click)=\"goTo('#contact')\"\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\tCONTACT\n\t\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"col-md-2\">\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-2\">\n\t\t\t\t<a \n\t\t\t\t\trouterLink=\"/\"\t\t\t\t \n\t\t\t\t>\n\t\t\t\t\t<img src=\"assets/images/logo/logo_fb.png\">\n\t\t\t\t</a>\n\t\t\t\t<a \n\t\t\t\t\trouterLink=\"/\"\t\t\t\t\t \n\t\t\t\t>\n\t\t\t\t\t<img src=\"assets/images/logo/logo_instagram.png\">\n\t\t\t\t</a>\n\t\t\t\t<a \n\t\t\t\t\trouterLink=\"/\"\t\t\t\t\t \n\t\t\t\t>\n\t\t\t\t\t<img src=\"assets/images/logo/logo-o_o.png\">\n\t\t\t\t</a>\n\t\t\t\t<a \n\t\t\t\t\trouterLink=\"/\"\t\t\t\t\t \n\t\t\t\t>\n\t\t\t\t\t<img src=\"assets/images/logo/logo_etoil.png\">\n\t\t\t\t</a>\t\t\t\t\n\t\t\t</div>\t\t\t\t\n\t\t</div>\n\t</div>\n</div>\n<!-- Fin menu -->\n\n<div \n\tid=\"content\" \n>\n\n\t<div id=\"home\">\n\t\t<app-home></app-home>\n\t</div>\n\n\t<div id=\"presentation\">\n\t\t<app-presentation></app-presentation>\n\t</div>\n\t\n\t<div id=\"menu\">\n\t\t<div parallax class=\"parallax-entrees\" [config]=\"{axis: X, speed: .0}\">\n\t\t\t<h4 class=\"font_4\">\n\t\t\t\tNos entrées\n\t\t\t</h4>\n\t\t</div>\n\t\t<app-menu></app-menu>\n\n\t\t<div parallax class=\"parallax-plats\" [config]=\"{axis: X, speed: .0}\">\n\t\t\t<h4 class=\"font_4\">\n\t\t\t\tNos plats\n\t\t\t</h4>\n\t\t</div>\t\t\n\t\t<app-plat></app-plat>\n\n\t\t<div parallax class=\"parallax-desserts\" [config]=\"{axis: X, speed: -.5}\">\n\t\t\t<h4 class=\"font_4\">\n\t\t\t\tNos desserts\n\t\t\t</h4>\n\t\t</div>\t\n\t\t<app-dessert></app-dessert>\t\n\n\t\t<div parallax class=\"parallax-boissons\" [config]=\"{axis: X, speed: -.3}\">\n\t\t\t<h4 class=\"font_4\">\n\t\t\t\tNos boissons\n\t\t\t</h4>\n\t\t</div>\n\t\t<app-boisson></app-boisson>\n\t</div>\n\n\t<div id=\"contact\" style=\"background: #e8e8e8;\">\n\t\t<app-contact></app-contact>\n\t</div>\n\n</div>"
 
 /***/ }),
 
@@ -1268,8 +1460,8 @@ module.exports = "<!-- Menu -->\n<div class=\"menu\">\n\t<div class=\"container-
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OnepageComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_utils__ = __webpack_require__("../../../../ng2-utils/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_utils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_utils__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_page_scroll__ = __webpack_require__("../../../../ng2-page-scroll/ng2-page-scroll.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1279,33 +1471,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 
 var OnepageComponent = /** @class */ (function () {
-    // hid = 'h1'; wid='w1';
-    function OnepageComponent() {
-        this.id = 's1';
+    function OnepageComponent(pageScrollService, document) {
+        this.pageScrollService = pageScrollService;
+        this.document = document;
     }
-    OnepageComponent.prototype.ngOnInit = function () {
+    OnepageComponent.prototype.ngOnInit = function () { };
+    OnepageComponent.prototype.goToHome = function () {
+        var pageScrollInstance = __WEBPACK_IMPORTED_MODULE_2_ng2_page_scroll__["b" /* PageScrollInstance */].simpleInstance(this.document, '#home');
+        this.pageScrollService.start(pageScrollInstance);
     };
-    OnepageComponent.prototype.scrollTo = function (selector, parentSelector) {
-        var horizontal = false;
-        Object(__WEBPACK_IMPORTED_MODULE_1_ng2_utils__["scrollTo"])(selector, // scroll to this
-        parentSelector, // scroll within (null if window scrolling)
-        horizontal, // is it horizontal scrolling
-        0 // distance from top or left
-        );
+    ;
+    OnepageComponent.prototype.goTo = function (destination) {
+        var pageScrollInstance = __WEBPACK_IMPORTED_MODULE_2_ng2_page_scroll__["b" /* PageScrollInstance */].simpleInstance(this.document, destination);
+        this.pageScrollService.start(pageScrollInstance);
     };
-    OnepageComponent.prototype.scrollEvent = function () {
-        console.log('e');
+    ;
+    OnepageComponent.prototype.scrollSomewhereHorizontally = function () {
+        var pageScrollInstance = __WEBPACK_IMPORTED_MODULE_2_ng2_page_scroll__["b" /* PageScrollInstance */].newInstance({
+            document: this.document,
+            scrollTarget: '#targetToTheRight',
+            verticalScrolling: false
+        });
+        this.pageScrollService.start(pageScrollInstance);
     };
+    ;
+    OnepageComponent.prototype.goToHeadingInContainer = function () {
+        var pageScrollInstance = __WEBPACK_IMPORTED_MODULE_2_ng2_page_scroll__["b" /* PageScrollInstance */].newInstance({
+            document: this.document,
+            scrollTarget: '.headingClass',
+            scrollingViews: [this.container.nativeElement]
+        });
+        this.pageScrollService.start(pageScrollInstance);
+    };
+    ;
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('container'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], OnepageComponent.prototype, "container", void 0);
     OnepageComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-onepage',
             template: __webpack_require__("../../../../../src/app/pages/onepage/onepage.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/onepage/onepage.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_common__["c" /* DOCUMENT */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ng2_page_scroll__["c" /* PageScrollService */], Object])
     ], OnepageComponent);
     return OnepageComponent;
 }());
@@ -1314,10 +1531,10 @@ var OnepageComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/onepage/slider_template_2.jpg":
+/***/ "../../../../../src/app/pages/onepage/plat.webp":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "slider_template_2.0b230a7b2ff450ef9b7b.jpg";
+module.exports = __webpack_require__.p + "plat.c618ddc4b6ae7e44352b.webp";
 
 /***/ }),
 
@@ -1378,11 +1595,11 @@ var PlatComponent = /** @class */ (function () {
             .map(function (response) { return response.json(); })
             .subscribe(function (data) {
             _this.plats = data;
-            _this.platsCharger = true;
+            _this.platsCharger = (data.length > 0) ? true : false;
         });
     };
     PlatComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-plat',
             template: __webpack_require__("../../../../../src/app/pages/plat/plat.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/plat/plat.component.css")]
@@ -1464,7 +1681,7 @@ var PresentationComponent = /** @class */ (function () {
     PresentationComponent.prototype.ngOnInit = function () {
     };
     PresentationComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-presentation',
             template: __webpack_require__("../../../../../src/app/pages/presentation/presentation.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/presentation/presentation.component.css"), __webpack_require__("../../../../../src/app/pages/presentation/fonts-googleapis-component.css")]
@@ -1551,14 +1768,14 @@ var RegisterComponent = /** @class */ (function () {
         });
     };
     RegisterComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             // selector: 'app-register',
             moduleId: module.i.toString(),
             template: __webpack_require__("../../../../../src/app/register/register.component.html"),
             styles: [__webpack_require__("../../../../../src/app/register/register.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["f" /* Router */],
             __WEBPACK_IMPORTED_MODULE_4__services_table_users_service__["a" /* UsersService */],
             __WEBPACK_IMPORTED_MODULE_3__services__["a" /* AlertService */]])
     ], RegisterComponent);
@@ -1599,7 +1816,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });

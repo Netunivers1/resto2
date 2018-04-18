@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
-import { scrollTo } from 'ng2-utils';
+import { Component, OnInit, Inject, ViewChild, ElementRef } from '@angular/core';
+import { DOCUMENT} from '@angular/common';
+import { PageScrollConfig, PageScrollService, PageScrollInstance } from 'ng2-page-scroll';
+ 
 
 @Component({
   selector: 'app-onepage',
@@ -9,26 +10,46 @@ import { scrollTo } from 'ng2-utils';
 })
 export class OnepageComponent implements OnInit {
 
-	id = 's1'; 
-	// hid = 'h1'; wid='w1';
+     @ViewChild('container')
+     private container: ElementRef;
 
-	constructor() { }
+	constructor(
+		private pageScrollService: PageScrollService, 
+		@Inject(DOCUMENT) private document: any
+		) { }
 
-	ngOnInit() {
-	}
+	ngOnInit() { }
 
-	scrollTo(selector, parentSelector) {
-		let horizontal = false;
-		scrollTo(
-			selector,       // scroll to this
-			parentSelector, // scroll within (null if window scrolling)
-			horizontal,     // is it horizontal scrolling
-			0               // distance from top or left
+	public goToHome(): void {
+		let pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(
+			this.document, '#home'
 		);
-	}
+		this.pageScrollService.start(pageScrollInstance);
+	};
 
-	scrollEvent(){
-		console.log('e');
-	}
+	public goTo(destination): void {
+		let pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(
+			this.document, destination
+		);
+		this.pageScrollService.start(pageScrollInstance);
+	};    
+
+	public scrollSomewhereHorizontally(): void {
+		let pageScrollInstance: PageScrollInstance = PageScrollInstance.newInstance({
+			document: this.document, 
+			scrollTarget: '#targetToTheRight', 
+			verticalScrolling: false
+		});
+		this.pageScrollService.start(pageScrollInstance);
+	}; 
+
+	public goToHeadingInContainer(): void {
+		let pageScrollInstance: PageScrollInstance = PageScrollInstance.newInstance({
+			document: this.document, 
+			scrollTarget: '.headingClass', 
+			scrollingViews: [this.container.nativeElement]
+		});
+		this.pageScrollService.start(pageScrollInstance);
+	};
 
 }

@@ -6,7 +6,8 @@ import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { AgmCoreModule } from '@agm/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ParallaxScrollModule } from 'ng2-parallaxscroll';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 // import { PagesModule } from './pages/pages.module';
 
@@ -39,6 +40,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { OnepageComponent } from './pages/onepage/onepage.component';
 import { menuComponent } from './pages/menu/menu.component';
 import { PlatComponent } from './pages/plat/plat.component';
+import { DessertComponent } from './pages/dessert/dessert.component';
+import { BoissonComponent } from './pages/boisson/boisson.component';
 // import { JwtInterceptor } from './_helpers';
 
 
@@ -59,7 +62,9 @@ import { PlatComponent } from './pages/plat/plat.component';
     ContactComponent,
     OnepageComponent,
     menuComponent,
-    PlatComponent
+    PlatComponent,
+    DessertComponent,
+    BoissonComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +76,9 @@ import { PlatComponent } from './pages/plat/plat.component';
     HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCZeDurG5gamvy7AGTl-zerIuq-kzoNrRc'
-    })
+    }),
+    ParallaxScrollModule,
+    Ng2PageScrollModule
   ],
   providers: [
     AuthGuardService,

@@ -8,6 +8,12 @@ import { DeletePlatComponent } from './plat/delete/delete.component';
 import { DeleteMenuComponent } from './menu/delete/delete.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { AjoutUtilisateurComponent } from './utilisateur/ajout/ajout.component';
+import { DesertComponent } from './desert/desert.component';
+import { DeleteDessertComponent } from './desert/delete/delete.component';
+import { AjoutDessertComponent } from './desert/ajout/ajout.component';
+import { BoissonComponent } from './boisson/boisson.component';
+import { AjoutBoissonComponent } from './boisson/ajout/ajout.component';
+import { DeleteBoissonComponent } from './boisson/delete/delete.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -20,6 +26,12 @@ const routes: Routes = [
     { path: 'deletemenu/:id', component: DeleteMenuComponent },
     { path: 'utilisateur', component: UtilisateurComponent },
     { path: 'ajoututilisateur', component: AjoutUtilisateurComponent },
+    { path: 'dessert/:insertOrList', component: DesertComponent },
+    { path: 'deletedessert/:id', component: DeleteDessertComponent },
+    { path: 'ajoutdessert', component: AjoutDessertComponent },
+    { path: 'boisson/:insertOrList', component: BoissonComponent },
+    { path: 'ajoutboisson', component: AjoutBoissonComponent },
+    { path: 'deleteboisson/:id', component: DeleteBoissonComponent },
 ];
 
 export const adminRouting = RouterModule.forChild(routes);

@@ -115,8 +115,11 @@ div.bandeaurose > p {
     color: #000 !important;
 }
 
-.parallax-plats {
-    background-image: url('slider_template_2.jpg');
+.parallax-home {
+    background: url('slide_resize.jpg') no-repeat center center fixed;;
     height: 600px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }

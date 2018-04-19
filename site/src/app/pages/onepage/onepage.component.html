@@ -106,28 +106,44 @@
 	</div>
 	
 	<div id="menu">
-		<div parallax class="parallax-entrees" [config]="{axis: X, speed: .0}">
+		<div 
+			parallax 
+			class="parallax-entrees" 
+			[config]="{axis: X, speed: 1}"
+		>
 			<h4 class="font_4">
 				Nos entrées
 			</h4>
 		</div>
 		<app-menu></app-menu>
 
-		<div parallax class="parallax-plats" [config]="{axis: X, speed: .0}">
+		<div 
+			parallax 
+			class="parallax-plats" 
+			[config]="{axis: X, speed: 1}"
+		>
 			<h4 class="font_4">
 				Nos plats
 			</h4>
 		</div>		
 		<app-plat></app-plat>
 
-		<div parallax class="parallax-desserts" [config]="{axis: X, speed: -.5}">
+		<div 
+			parallax 
+			class="parallax-desserts" 
+			[config]="{axis: X, speed: -.2, initialValue: -8, cssUnit: '%'}"
+		>
 			<h4 class="font_4">
 				Nos desserts
 			</h4>
 		</div>	
 		<app-dessert></app-dessert>	
 
-		<div parallax class="parallax-boissons" [config]="{axis: X, speed: -.3}">
+		<div 
+			parallax 
+			class="parallax-boissons" 
+			[config]="{axis: X, speed: -.2, initialValue: -10, cssUnit: '%'}"
+			>
 			<h4 class="font_4">
 				Nos boissons
 			</h4>
@@ -135,7 +151,7 @@
 		<app-boisson></app-boisson>
 	</div>
 
-	<div id="contact" style="background: #e8e8e8;">
+	<div id="contact">
 		<app-contact></app-contact>
 	</div>
 

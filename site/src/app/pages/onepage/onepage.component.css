@@ -6,6 +6,7 @@
     z-index: 9999;
     width: 100%;
     position: fixed;
+    border-bottom: 0.5px solid #dcd3d3;
 }
 
 .menu a {
@@ -19,36 +20,60 @@
 }
 
 #content {
-    padding-top: 60px; 
+    /*padding-top: 60px; */
+}
+
+#home {
+    padding-top: 60px;
 }
 
 #presentation {
-    height: auto;
+    padding-top: 60px;
+}
+
+#menu {
+    padding-top: 60px;
 }
 
 
 .parallax-entrees {
-    background-image: url('entree.webp');
+    background-image: url('nos_entrees_1.jpg');
     height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
 .parallax-plats {
-    background-image: url('plat.webp');
+    background-image: url('nos_plats.jpg');
     height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
 .parallax-desserts {
     background-image: url('nos_desserts.jpg');
     height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
 .parallax-boissons {
     background-image: url('boisson.webp');
     height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+}
+
+#contact {
+    padding-top: 60px;
 }
 
 /*Pour la section accueil*/
@@ -79,5 +104,5 @@
     color: #2F2E2E;
     color: #fff;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 80px;
 }

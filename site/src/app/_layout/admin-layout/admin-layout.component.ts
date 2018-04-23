@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminLayoutComponent implements OnInit {
 
-  constructor() { }
+	currentYear:any;
 
-  ngOnInit() {
-  }
+	constructor() { }
+
+	ngOnInit() {
+		let date = new Date();
+		this.currentYear = date.getFullYear();  	
+	}
 
 }

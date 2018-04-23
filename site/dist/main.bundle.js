@@ -220,7 +220,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/_layout/admin-layout/admin-layout.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"main-wrapper\">\n\t<admin-header></admin-header>\n\t<admin-sidebar></admin-sidebar>\n\n\t<div class=\"page-wrapper\">\n\t    <!-- ============================================================== -->\n\t    <!-- Container fluid  -->\n\t    <!-- ============================================================== -->\n\t    <div class=\"container-fluid\">\n\t        <!-- ============================================================== -->\n\t        <!-- Bread crumb and right sidebar toggle -->\n\t        <!-- ============================================================== -->\n\t        <div class=\"row page-titles\">\n\t            <div class=\"col-md-5 col-8 align-self-center\">\n\t                <h3 class=\"text-themecolor\">Tableau de bord</h3>\n\t                <ol class=\"breadcrumb\">\n\t                    <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Accueil</a></li>\n\t                    <li class=\"breadcrumb-item active\">Tableau de bord</li>\n\t                </ol>\n\t            </div>\n\t        </div>\t\n\t\t\n\t\t\t<router-outlet></router-outlet>\n\n\t    </div>\n\t    <!-- ============================================================== -->\n\t    <!-- End Container fluid  -->\n\t    <!-- ============================================================== -->\n\t    <!-- ============================================================== -->\n\t    <!-- footer -->\n\t    <!-- ============================================================== -->\n\t    <!-- <footer class=\"footer\">\n\t\t\t© 2018 <strong>PAMF</strong> - Tous droits réservés - Création \n\t\t\t<a href=\"https://www.kook-agency.fr/\" target=\"blank\" title=\"Création Site Internet\">kook-agency.fr\n\t\t\t</a>\t    \t\n\t    </footer> -->\n\t    <!-- ============================================================== -->\n\t    <!-- End footer -->\n\t    <!-- ============================================================== -->\n\t</div>\t\n\n</div>"
+module.exports = "<div id=\"main-wrapper\">\n\t<admin-header></admin-header>\n\t<admin-sidebar></admin-sidebar>\n\n\t<div class=\"page-wrapper\">\n\t    <!-- ============================================================== -->\n\t    <!-- Container fluid  -->\n\t    <!-- ============================================================== -->\n\t    <div class=\"container-fluid\">\n\t        <!-- ============================================================== -->\n\t        <!-- Bread crumb and right sidebar toggle -->\n\t        <!-- ============================================================== -->\n\t        <div class=\"row page-titles\">\n\t            <div class=\"col-md-5 col-8 align-self-center\">\n\t                <h3 class=\"text-themecolor\">Tableau de bord</h3>\n\t                <ol class=\"breadcrumb\">\n\t                    <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Accueil</a></li>\n\t                    <li class=\"breadcrumb-item active\">Tableau de bord</li>\n\t                </ol>\n\t            </div>\n\t        </div>\t\n\t\t\n\t\t\t<router-outlet></router-outlet>\n\n\t    </div>\n\t    <!-- ============================================================== -->\n\t    <!-- End Container fluid  -->\n\t    <!-- ============================================================== -->\n\t    <!-- ============================================================== -->\n\t    <!-- footer -->\n\t    <!-- ============================================================== -->\n\t    <!-- <footer class=\"footer\">\n\t\t\t<p style=\"text-align: center;\">\n\t\t\t\t<a href=\"https://www.kook-agency.fr/\" target=\"blank\"> \n\t\t\t\t\t© {{currentYear}} KOOK AGENCY \n\t\t\t\t</a>\n\t\t\t\t<a routerLink=\"/admin/dashboard\"> Ma carte </a>\n\t\t\t</p>\t    \t\n\t    </footer> -->\n\t    <!-- ============================================================== -->\n\t    <!-- End footer -->\n\t    <!-- ============================================================== -->\n\t</div>\t\n\n</div>"
 
 /***/ }),
 
@@ -244,6 +244,8 @@ var AdminLayoutComponent = /** @class */ (function () {
     function AdminLayoutComponent() {
     }
     AdminLayoutComponent.prototype.ngOnInit = function () {
+        var date = new Date();
+        this.currentYear = date.getFullYear();
     };
     AdminLayoutComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -337,7 +339,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".carte {\n    margin-left: 20px;\n    padding-left: 10px;\n    padding-right: 10px;\n    border: 1px solid #656328;\n    color: #4e5217;\t\n}\n\n.carte:hover {\n\tcolor: #bf7f09;\n\tborder: 1px solid #bf7f09;\n}", ""]);
 
 // exports
 
@@ -350,7 +352,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/_layout/site-footer/site-footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"footer_onepage\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<p style=\"text-align: center; padding-top: 10px;\">\n\t\t\t\t\t<a routerLink=\"/admin/dashboard\"> © 2018 KOOK AGENCY </a>\n\t\t\t\t</p>\t\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
+module.exports = "<div class=\"footer_onepage\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<p style=\"text-align: center; padding-top: 10px;\">\n\t\t\t\t\t<a href=\"https://www.kook-agency.fr/\" target=\"blank\"> \n\t\t\t\t\t\t© {{currentYear}} KOOK AGENCY \n\t\t\t\t\t</a>\n\t\t\t\t\t<a routerLink=\"/admin/dashboard\" class=\"carte\"> \n\t\t\t\t\t\tMa carte \n\t\t\t\t\t</a>\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -374,6 +376,8 @@ var SiteFooterComponent = /** @class */ (function () {
     function SiteFooterComponent() {
     }
     SiteFooterComponent.prototype.ngOnInit = function () {
+        var date = new Date();
+        this.currentYear = date.getFullYear();
     };
     SiteFooterComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({

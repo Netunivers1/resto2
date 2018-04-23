@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SiteFooterComponent implements OnInit {
 
-  constructor() { }
+	currentYear;
 
-  ngOnInit() {
-  }
+	constructor() { }
+
+	ngOnInit() {
+		let date = new Date();
+		this.currentYear = date.getFullYear();  	
+	}
 
 }

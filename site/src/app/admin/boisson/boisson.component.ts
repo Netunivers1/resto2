@@ -15,6 +15,7 @@ export class BoissonComponent implements OnInit {
 	boissons;
 	insertOrList;
 	deleted;
+	modified
 	idBoissonTodelete;
 	boissonsCharger = false;
 	boissonToModifier = false;
@@ -33,6 +34,7 @@ export class BoissonComponent implements OnInit {
 		console.log(this.route.snapshot.params);
 		this.insertOrList = (this.route.snapshot.params.insertOrList == 'insert') ? true : false;
 		this.deleted = (this.route.snapshot.params.insertOrList == 'deleted') ? true : false;
+		this.modified = (this.route.snapshot.params.insertOrList == 'modified') ? true : false;
 
 		console.log(this.deleted);		
 
@@ -69,20 +71,29 @@ export class BoissonComponent implements OnInit {
 		let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
     	let options = new RequestOptions({ headers: cpHeaders });
 
-		let body = JSON.stringify(data);
 		let url = urlApi + '/boisson/' + data.id;
-		console.log(this.headers);
-		return this.http.put(
-			url,
-			data,
-			options
-		).map(success => {
-			success.status;
-			console.log('resss');
-		})
-		.catch(this.handleError);
 		
+		let dataToPut = {
+			nom       : data.nom,
+			pm 		  : data.pm,
+			gm 		  : data.gm
+		}
 
+		let body = JSON.stringify(dataToPut);
+		this.http.put(
+			url,
+			body,
+			options
+		).subscribe(
+			res => {
+				console.log(res);
+				this.router.navigate(['/admin/boisson/modified']);
+			},
+			err => {
+				console.log(err);
+				alert('Une erreur est survenue lors de la mise à jour');
+			}
+		);		
 	}
 
     private extractData(res: Response) {

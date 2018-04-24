@@ -79,18 +79,29 @@ export class MenuComponent implements OnInit {
 		let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
     	let options = new RequestOptions({ headers: cpHeaders });
 
-		let body = JSON.stringify(data);
+    	let dataToPut = {
+			nom       : data.nom,
+			prix	  : data.prix,
+			ingredient: data.ingredient
+		}
+		let body = JSON.stringify(dataToPut);
+
 		let url = urlApi + '/menu/' + data.id;
 		console.log(this.headers);
 		return this.http.put(
 			url,
-			data,
+			body,
 			options
-		).map(success => {
-			success.status;
-			console.log('resss');
-		})
-		.catch(this.handleError);
+		).subscribe(
+			res => {
+				console.log(res);
+				this.router.navigate(['/admin/menu/modified']);
+			},
+			err => {
+				console.log(err);
+				alert('Une erreur est survenue lors de la mise à jour');
+			}
+		);	
 		
 
 	}
@@ -111,9 +122,9 @@ export class MenuComponent implements OnInit {
 
 	validationFomulaire(data) {
 		let message = '';
-		if ( data.nom === '' ) message = 'Le champ nom ne doit pas être vide';
-		if ( data.pm === '' ) message = 'Le champ 33cl ne doit pas être vide';
-		if ( data.gm === '' ) message = 'Le champ 50cl ne doit pas être vide';
+		if ( data.nom === '' ) message = 'Le champ Nom du menu  ne doit pas être vide';
+		if ( data.prix === '' ) message = 'Le champ Prix ne doit pas être vide';
+		if ( data.ingredient === '' ) message = 'Le champ Ingrédient ne doit pas être vide';
 
 		if ( message != '' ) return message;
 

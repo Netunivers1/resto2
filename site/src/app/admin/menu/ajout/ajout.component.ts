@@ -42,9 +42,9 @@ export class AjoutMenuComponent implements OnInit {
 
 	validationFomulaire(data) {
 		let message = '';
-		if ( data.nom === '' ) message = 'Le champ nom ne doit pas être vide';
-		if ( data.pm === '' ) message = 'Le champ 33cl ne doit pas être vide';
-		if ( data.gm === '' ) message = 'Le champ 50cl ne doit pas être vide';
+		if ( data.nom === '' ) message = 'Le champ Nom du menu  ne doit pas être vide';
+		if ( data.prix === '' ) message = 'Le champ Prix ne doit pas être vide';
+		if ( data.ingredient === '' ) message = 'Le champ Ingrédient ne doit pas être vide';
 
 		if ( message != '' ) return message;
 

@@ -15,6 +15,7 @@ export class DesertComponent implements OnInit {
 	desserts;
 	insertOrList;
 	deleted;
+	modified
 	idDessertTodelete;
 	dessertsCharger = false;
 	dessertToModifier = false;
@@ -27,11 +28,16 @@ export class DesertComponent implements OnInit {
 		private route: ActivatedRoute,
 		private router: Router,
 		public ngxSmartModalService: NgxSmartModalService
-	) { }
+	) { 
+		this.headers = new Headers({ 'Content-Type': 'application/json', 
+                                     'Accept': 'q=0.8;application/json;q=0.9' });
+        this.options = new RequestOptions({ headers: this.headers });
+	}
 
 	ngOnInit() {
 		this.insertOrList = (this.route.snapshot.params.insertOrList == 'insert') ? true : false;
-		this.deleted = (this.route.snapshot.params.insertOrList == 'deleted') ? true : false;		
+		this.deleted = (this.route.snapshot.params.insertOrList == 'deleted') ? true : false;	
+		this.modified = (this.route.snapshot.params.insertOrList == 'modified') ? true : false;	
 
 		let url = urlApi + '/dessert';
 
@@ -66,22 +72,33 @@ export class DesertComponent implements OnInit {
 		let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
     	let options = new RequestOptions({ headers: cpHeaders });
 
-		let body = JSON.stringify(data);
+    	let dataToPut = {
+			nom       : data.nom,
+			prix	  : data.prix,
+			ingredient: data.ingredient
+		}
+		let body = JSON.stringify(dataToPut);
+
 		let url = urlApi + '/dessert/' + data.id;
 		console.log(this.headers);
 		return this.http.put(
 			url,
-			data,
+			body,
 			options
-		).map(success => {
-			success.status;
-			console.log('resss');
-		})
-		.catch(this.handleError);
+		).subscribe(
+			res => {
+				console.log(res);
+				this.router.navigate(['/admin/dessert/modified']);
+			},
+			err => {
+				console.log(err);
+				console.log(url);
+				alert('Une erreur est survenue lors de la mise à jour');
+			}
+		);	
 		
 
 	}
-
     private extractData(res: Response) {
     	console.log('extractData');
         let body = res.json();

@@ -59,6 +59,40 @@ class DessertController extends Controller {
             $em->remove($Dessert);
             $em->flush();
         }
-    }    
+    }
+
+
+    /**
+     * @Rest\View()
+     * @Rest\Put("/dessert/{id}")
+     */
+    public function updateDessertAction(Request $request) {
+        $Dessert = $this->get('doctrine.orm.entity_manager')
+                ->getRepository('AppBundle:Dessert')
+                ->find($request->get('id')); // L'identifiant en tant que paramètre n'est plus nécessaire
+
+        if (empty($Dessert)) {
+            return new JsonResponse(
+                ['message' => 'Dessert non trouvé'], 
+                Response::HTTP_NOT_FOUND
+            );
+        }
+       $form = $this->createForm(DessertType::class, $Dessert);
+
+         // Le paramètre false dit à Symfony de garder les valeurs dans notre 
+         // entité si l'utilisateur n'en fournit pas une dans sa requête
+        $form->submit($request->request->all(), false);
+
+        if ($form->isValid()) {
+            $em = $this->get('doctrine.orm.entity_manager');
+            // l'entité vient de la base, donc le merge n'est pas nécessaire.
+            // il est utilisé juste par soucis de clarté
+            $em->merge($Dessert);
+            $em->flush();
+            return $Dessert;
+        } else {
+            return $form;
+        }
+    }      
 
 }

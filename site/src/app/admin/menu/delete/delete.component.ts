@@ -11,6 +11,8 @@ import { urlApi } from '../../../config/host';
 })
 export class DeleteMenuComponent implements OnInit {
 
+	chargement;
+
 	constructor(
 		private http: Http,
 		private route: ActivatedRoute,
@@ -19,6 +21,13 @@ export class DeleteMenuComponent implements OnInit {
 
 	ngOnInit() {
 		let id = this.route.snapshot.params.id;
+
+		if ( id == 'simple_recharge' ) {
+			this.chargement = 'Modification en cours ...';
+			return this.router.navigate(['/admin/menu/modified']);
+		}
+		this.chargement = 'Suppression en cours ...';
+
 		this.deleteMenuById(id);		
 	}
 

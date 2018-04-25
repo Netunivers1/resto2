@@ -15,6 +15,7 @@ export class PlatComponent implements OnInit {
 	plats;
 	insertOrList;
 	deleted;
+	modified
 	idPlatTodelete;
 	platsCharger = false;
 	platToModifier = false;
@@ -25,12 +26,18 @@ export class PlatComponent implements OnInit {
 	constructor(
 		private http: Http,
 		private route: ActivatedRoute,
-		public ngxSmartModalService: NgxSmartModalService
-	) { }
+		public ngxSmartModalService: NgxSmartModalService,		
+		private router: Router		
+	) {
+		this.headers = new Headers({ 'Content-Type': 'application/json', 
+                                     'Accept': 'q=0.8;application/json;q=0.9' });
+        this.options = new RequestOptions({ headers: this.headers });
+         }
 
 	ngOnInit() {
 		this.insertOrList = (this.route.snapshot.params.insertOrList == 'insert') ? true : false;
 		this.deleted = (this.route.snapshot.params.insertOrList == 'deleted') ? true : false;
+		this.modified = (this.route.snapshot.params.insertOrList == 'modified') ? true : false;
 
 		let url = urlApi + '/plat';
 		this.http.get(url)
@@ -68,18 +75,29 @@ export class PlatComponent implements OnInit {
 		let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
     	let options = new RequestOptions({ headers: cpHeaders });
 
-		let body = JSON.stringify(data);
+    	let dataToPut = {
+			nom       : data.nom,
+			prix	  : data.prix,
+			ingredient: data.ingredient
+		}
+		let body = JSON.stringify(dataToPut);
+
 		let url = urlApi + '/plat/' + data.id;
 		console.log(this.headers);
 		return this.http.put(
 			url,
-			data,
+			body,
 			options
-		).map(success => {
-			success.status;
-			console.log('resss');
-		})
-		.catch(this.handleError);
+		).subscribe(
+			res => {
+				console.log(res);
+				this.router.navigate(['/admin/plat/modified']);
+			},
+			err => {
+				console.log(err);
+				alert('Une erreur est survenue lors de la mise à jour');
+			}
+		);	
 		
 
 	}
@@ -101,8 +119,8 @@ export class PlatComponent implements OnInit {
 	validationFomulaire(data) {
 		let message = '';
 		if ( data.nom === '' ) message = 'Le champ nom ne doit pas être vide';
-		if ( data.pm === '' ) message = 'Le champ 33cl ne doit pas être vide';
-		if ( data.gm === '' ) message = 'Le champ 50cl ne doit pas être vide';
+		if ( data.prix === '' ) message = 'Le champ prix ne doit pas être vide';
+		if ( data.ingredient === '' ) message = 'Le champ ingredient ne doit pas être vide';
 
 		if ( message != '' ) return message;
 

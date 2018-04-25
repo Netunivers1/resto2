@@ -61,4 +61,37 @@ class BoissonController extends Controller {
         }
     }
 
+     /**
+     * @Rest\View()
+     * @Rest\Put("/boisson/{id}")
+     */
+    public function updateBoissonAction(Request $request) {
+        $boissonr2 = $this->get('doctrine.orm.entity_manager')
+                ->getRepository('AppBundle:Boissonr2')
+                ->find($request->get('id')); // L'identifiant en tant que paramètre n'est plus nécessaire
+
+        if (empty($boissonr2)) {
+            return new JsonResponse(
+                ['message' => 'Boisson non trouvé'], 
+                Response::HTTP_NOT_FOUND
+            );
+        }
+       $form = $this->createForm(boissonr2Type::class, $boissonr2);
+
+         // Le paramètre false dit à Symfony de garder les valeurs dans notre 
+         // entité si l'utilisateur n'en fournit pas une dans sa requête
+        $form->submit($request->request->all(), false);
+
+        if ($form->isValid()) {
+            $em = $this->get('doctrine.orm.entity_manager');
+            // l'entité vient de la base, donc le merge n'est pas nécessaire.
+            // il est utilisé juste par soucis de clarté
+            $em->merge($boissonr2);
+            $em->flush();
+            return $boissonr2;
+        } else {
+            return $form;
+        }
+    }   
+
 }

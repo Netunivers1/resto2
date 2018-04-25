@@ -90,8 +90,8 @@ export class PlatComponent implements OnInit {
 			options
 		).subscribe(
 			res => {
-				console.log(res);
-				this.router.navigate(['/admin/plat/modified']);
+				this.ngxSmartModalService.closeLatestModal();
+				this.router.navigate(['/admin/deleteplat/simple_recharge'])
 			},
 			err => {
 				console.log(err);

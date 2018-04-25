@@ -46,7 +46,6 @@ export class BoissonComponent implements OnInit {
 			)
 			.subscribe(
 				(data) => {
-					console.log(data);
 					this.boissons = data;
 					this.boissonsCharger = (data.length > 0) ? true : false;
 				}
@@ -86,8 +85,8 @@ export class BoissonComponent implements OnInit {
 			options
 		).subscribe(
 			res => {
-				console.log(res);
-				this.router.navigate(['/admin/boisson/modified']);
+				this.ngxSmartModalService.closeLatestModal();
+				this.router.navigate(['/admin/deleteboisson/simple_recharge']);
 			},
 			err => {
 				console.log(err);
@@ -113,7 +112,8 @@ export class BoissonComponent implements OnInit {
 	validationFomulaire(data) {
 		let message = '';
 		if ( data.nom === '' ) message = 'Le champ nom ne doit pas être vide';
-		if ( data.prix === '' ) message = 'Le champ prix ne doit pas être vide';
+		if ( data.pm === '' ) message = 'Le prix pour le 33cl ne doit pas être vide';
+		if ( data.gm === '' ) message = 'Le prix pour le 50cl ne doit pas être vide';
 
 		if ( message != '' ) return message;
 

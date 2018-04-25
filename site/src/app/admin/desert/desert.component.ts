@@ -87,12 +87,11 @@ export class DesertComponent implements OnInit {
 			options
 		).subscribe(
 			res => {
-				console.log(res);
-				this.router.navigate(['/admin/dessert/modified']);
+				this.ngxSmartModalService.closeLatestModal();
+				this.router.navigate(['/admin/deletedessert/simple_recharge']);
 			},
 			err => {
 				console.log(err);
-				console.log(url);
 				alert('Une erreur est survenue lors de la mise à jour');
 			}
 		);	
@@ -117,6 +116,7 @@ export class DesertComponent implements OnInit {
 		let message = '';
 		if ( data.nom === '' ) message = 'Le champ nom ne doit pas être vide';
 		if ( data.prix === '' ) message = 'Le champ prix ne doit pas être vide';
+		if ( data.ingredient === '' ) message = 'Le champ ingredient ne doit pas être vide';
 
 		if ( message != '' ) return message;
 

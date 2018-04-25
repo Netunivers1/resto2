@@ -87,15 +87,15 @@ export class MenuComponent implements OnInit {
 		let body = JSON.stringify(dataToPut);
 
 		let url = urlApi + '/menu/' + data.id;
-		console.log(this.headers);
+
 		return this.http.put(
 			url,
 			body,
 			options
 		).subscribe(
 			res => {
-				console.log(res);
-				this.router.navigate(['/admin/menu/modified']);
+				this.ngxSmartModalService.closeLatestModal();
+				this.router.navigate(['/admin/deletemenu/simple_recharge'])
 			},
 			err => {
 				console.log(err);

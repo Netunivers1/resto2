@@ -29,3 +29,15 @@
     line-height: normal;
     letter-spacing: normal;
 }
+@media screen and (max-width: 768px) and (min-width: 415px)
+{
+  #font-mobile {
+    font-size: 57px !important;
+  }
+}
+@media screen and (max-width: 414px)
+{
+  #font-mobile {
+    font-size: 47px !important;
+  }
+}

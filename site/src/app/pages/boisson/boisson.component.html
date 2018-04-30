@@ -7,10 +7,10 @@
         <div class="col-md-6">            
         </div>
         <div class="col-md-3">
-            <h2>33cl</h2>
+            <h2 id="hide-mobile">33cl</h2>
         </div>
         <div class="col-md-3">
-            <h2>50cl</h2>
+            <h2 id="hide-mobile">50cl</h2>
         </div>
     </div>
 
@@ -18,11 +18,13 @@
         <div class="col-md-6">  
         	<h2>{{i.nom | uppercase}}</h2>
         </div>
-        <div class="col-md-3">
-            <p>{{i.pm}}</p>
+        <div class="col-md-3" id="list-prix">
+            <p id="show-mobile"><strong>33cl</strong></p>
+            <p id="prix_pm">{{i.pm}}</p>
         </div>
-        <div class="col-md-3">
-            <p>{{i.gm}}</p>
+        <div class="col-md-3" id="list-prix">
+             <p id="show-mobile"><strong>50cl</strong></p>
+            <p id="prix_gm">{{i.gm}}</p>
         </div>
     </div>
 </div>

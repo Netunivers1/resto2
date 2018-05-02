@@ -21,3 +21,39 @@
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
 }
+
+#show-mobile{
+    display: none !important;
+}
+
+@media screen and (min-width: 768px)
+{
+    #prix_pm{
+    margin-left: 0%;
+ }
+ #prix_gm{
+    margin-left: 0%;
+ }
+}
+@media screen and (max-width: 767px) 
+{
+      #hide-mobile{
+        display: none !important;
+      }
+
+     #show-mobile{
+        display: block !important;
+     }
+     #list-prix{
+         display: inline-flex !important;
+     }
+     #prix_pm{
+        margin-left: 68%;
+        position: absolute;
+     }
+     #prix_gm{
+        margin-left: 68%;
+        position: absolute;
+     }
+  
+}

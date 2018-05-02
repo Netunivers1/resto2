@@ -4,16 +4,17 @@
         <!-- Logo -->
         <!-- ============================================================== -->
         <div class="navbar-header">
-           <a class="navbar-brand" routerLink="/" style="color: white; font-size: 30px;">
+            <a class="navbar-brand" routerLink="/" style="color: white; font-size: 30px;">
                 <!-- Logo icon -->
                 <img 
-                    src="assets/images/logo.png" 
+                    src="assets/images/logo_bo-40.png" 
                     alt="homepage" 
                     class="light-logo"
-                    style="width: 15%;" 
                 />
                 <b>
-                    Resto 2
+                    <span class="light-logo">
+                        Resto 2
+                    </span>
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                     
                     <!-- Light Logo icon -->
@@ -34,6 +35,7 @@
                 <li class="nav-item"> 
                     <a 
                         class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"
+                        (click)="menuShowHide()"
                     >
                         <i class="mdi mdi-menu"></i>
                     </a> 
@@ -41,14 +43,13 @@
                 <!-- ============================================================== -->
                 <!-- Search -->
                 <!-- ============================================================== -->
-                <!-- <li class="nav-item hidden-sm-down search-box"> 
-                    <a 
-                        class="nav-link hidden-sm-down text-muted waves-effect waves-dark" 
-                        href="javascript:void(0)"
-                    >
-                        <i class="ti-search"></i>
-                    </a>
-                </li> -->
+                <!-- 
+                    <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                        <form class="app-search">
+                            <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a> 
+                        </form>
+                    </li>
+                -->
             </ul>
             <!-- ============================================================== -->
             <!-- User profile and search -->
@@ -58,14 +59,19 @@
                 <!-- Profile -->
                 <!-- ============================================================== -->
                 <li class="nav-item dropdown">
-                    <span style="padding-right: 50px; color: #fff;" >
+                    <a 
+                        class="nav-link dropdown-toggle text-muted waves-effect waves-dark" 
+                        data-toggle="dropdown" 
+                        aria-haspopup="true" 
+                        aria-expanded="false"
+                    >
                         <img 
                             src="assets/images/profil.png" 
                             alt="utilisateur" 
-                            class="profile-pic m-r-10" 
+                            class="profile-pic m-r-10"
                         />
                         Bonjour {{ user.prenom }}
-                    </span>
+                    </a>
                 </li>
             </ul>
         </div>

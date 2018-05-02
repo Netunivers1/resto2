@@ -20,3 +20,32 @@
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
 }
+
+.bg-info {
+    background-color: #545d66 !important;
+}
+
+table td:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .action_mobile > a {
+        width: 70% !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .action_mobile {
+        display: none;
+    }
+    .action_mobile_warning {
+        display: block !important;
+    }    
+}
+
+@media (min-width: 767px) {
+    .action_mobile_warning {
+        display: none !important;
+    }
+}

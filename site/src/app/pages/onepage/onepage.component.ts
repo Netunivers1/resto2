@@ -60,4 +60,26 @@ export class OnepageComponent implements OnInit {
 	        x.className = "topnav";
    	 }
 	};
+
+	public openTab(tabname, event) {
+		let tabs = Array.prototype.slice.call(document.querySelectorAll('.tabs .tabMenu .tabMenuList'));
+		tabs.forEach(function (value, index) {
+			value.className = value.className.replace(" current", "");
+			if (event.srcElement.innerHTML == value.innerHTML && value.className.indexOf('current') == -1) {
+				value.className += " current";
+			}
+		});
+		let i, arr;
+		let classHide = "hide-content";
+		let x = document.getElementsByClassName("tab");
+		for (i = 0; i < x.length; i++) {
+			arr = x[i].className.split(" ");
+			if (arr.indexOf(classHide) == -1) {
+				x[i].className += " " + classHide;
+			}
+		}
+		let currentTab = document.getElementById(tabname);
+		let currentClass = currentTab.className.replace(" hide-content", "");
+		currentTab.className = currentClass;
+	}
 }

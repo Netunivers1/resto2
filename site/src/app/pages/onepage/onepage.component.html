@@ -421,7 +421,7 @@
 		<div 
 			parallax 
 			class="parallax-entrees" 
-			[config]="{axis: X, speed: 1}"
+			[config]="{axis: X, speed: -.5, initialValue: 500}"
 		>
 			<h4 class="font_4">
 				Nos entrées
@@ -432,7 +432,7 @@
 		<div 
 			parallax 
 			class="parallax-plats" 
-			[config]="{axis: X, speed: 1}"
+			[config]="{axis: X, speed: -.5, initialValue: -150}"
 		>
 			<h4 class="font_4">
 				Nos plats
@@ -443,7 +443,7 @@
 		<div 
 			parallax 
 			class="parallax-desserts" 
-			[config]="{axis: X, speed: 1}"
+			[config]="{axis: X, speed: -.5, initialValue: 90}"
 		>
 			<h4 class="font_4">
 				Nos desserts
@@ -454,13 +454,39 @@
 		<div 
 			parallax 
 			class="parallax-boissons" 
-			[config]="{axis: X, speed: -.2, initialValue: -10, cssUnit: '%'}"
+			[config]="{axis: X, speed: -.05, initialValue: 150, cssUnit: '%'}"
 			>
 			<h4 class="font_4">
 				Nos boissons
 			</h4>
 		</div>
-		<app-boisson></app-boisson>
+		<div class="container">
+			<div class="tabs">
+				<nav class="tabMenu">
+					<div class="row">
+						<div class="col-md-6 tabMenuList current" (click)="openTab('des', $event)">Nos Boissons</div>
+						<div class="col-md-6 tabMenuList" (click)="openTab('vin', $event)">Nos Vins</div>
+					</div>
+				</nav>
+				<div class="tab" id="des">
+					<app-boisson></app-boisson>
+				</div>
+				<div class="tab hide-content" id="vin">
+					<app-vins2></app-vins2>
+				</div>
+			</div>
+		</div>
+		
+		<div 
+			parallax 
+			class="parallax-platdujour" 
+			[config]="{axis: X, speed: -.05, initialValue: -10, cssUnit: '%'}"
+			>
+			<h4 class="font_4">
+				Plat du jour & Suggestion
+			</h4>
+		</div>
+		<app-platdujour></app-platdujour>
 	</div>
 
 	<div id="contact">

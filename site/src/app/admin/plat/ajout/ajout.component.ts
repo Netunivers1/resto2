@@ -45,7 +45,7 @@ export class AjoutPlatComponent implements OnInit {
 		if ( data.nom === '' ) message = 'Le champ nom ne doit pas être vide';
 		if ( data.pm === '' ) message = 'Le champ petite ne doit pas être vide';
 		if ( data.gm === '' ) message = 'Le champ grande ne doit pas être vide';
-		if ( data.ingredient === '' ) message = 'Le champ ingredient ne doit pas être vide';
+		if ( data.ingredient === '' ) data.ingredient = "-";
 
 		if ( message != '' ) return message;
 

@@ -23,6 +23,10 @@ import { AjoutDessertComponent } from './desert/ajout/ajout.component';
 import { BoissonComponent } from './boisson/boisson.component';
 import { AjoutBoissonComponent } from './boisson/ajout/ajout.component';
 import { DeleteBoissonComponent } from './boisson/delete/delete.component';
+import { VinsComponent } from './vins/vins.component';
+import { AjoutVinsComponent } from './vins/ajout/ajout.component';
+import { PlatdujourComponent } from './platdujour/platdujour.component';
+import { AjoutComponent } from './platdujour/ajout/ajout.component';
 // import { RegisterComponent } from './register/register.component';
 // import { AlertComponent } from '../_directives/alert/alert.component';
 // import { LoginComponent } from './login/login.component';
@@ -53,6 +57,11 @@ import { DeleteBoissonComponent } from './boisson/delete/delete.component';
     BoissonComponent,
     AjoutBoissonComponent,
     DeleteBoissonComponent,
+    VinsComponent,
+    AjoutVinsComponent,
+    PlatdujourComponent,
+    AjoutComponent
+    // AjoutPlatdujourComponent,
     // RegisterComponent,
     // LoginComponent
   ],

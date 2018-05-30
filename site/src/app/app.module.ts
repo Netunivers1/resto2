@@ -42,6 +42,8 @@ import { menuComponent } from './pages/menu/menu.component';
 import { PlatComponent } from './pages/plat/plat.component';
 import { DessertComponent } from './pages/dessert/dessert.component';
 import { BoissonComponent } from './pages/boisson/boisson.component';
+import { Vins2Component } from './pages/vins2/vins2.component';
+import { PlatdujourComponent } from './pages/platdujour/platdujour.component';
 // import { JwtInterceptor } from './_helpers';
 
 
@@ -64,7 +66,9 @@ import { BoissonComponent } from './pages/boisson/boisson.component';
     menuComponent,
     PlatComponent,
     DessertComponent,
-    BoissonComponent
+    BoissonComponent,
+    Vins2Component,
+    PlatdujourComponent
   ],
   imports: [
     BrowserModule,

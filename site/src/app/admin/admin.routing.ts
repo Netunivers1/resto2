@@ -14,6 +14,10 @@ import { AjoutDessertComponent } from './desert/ajout/ajout.component';
 import { BoissonComponent } from './boisson/boisson.component';
 import { AjoutBoissonComponent } from './boisson/ajout/ajout.component';
 import { DeleteBoissonComponent } from './boisson/delete/delete.component';
+import { VinsComponent } from './vins/vins.component';
+import { AjoutVinsComponent } from './vins/ajout/ajout.component';
+import { PlatdujourComponent } from './platdujour/platdujour.component';
+import { AjoutComponent } from './platdujour/ajout/ajout.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -32,6 +36,10 @@ const routes: Routes = [
     { path: 'boisson/:insertOrList', component: BoissonComponent },
     { path: 'ajoutboisson', component: AjoutBoissonComponent },
     { path: 'deleteboisson/:id', component: DeleteBoissonComponent },
+    { path: 'vins/:param', component: VinsComponent },
+    { path: 'ajoutvins', component: AjoutVinsComponent },
+    { path: 'platdujour/:param', component: PlatdujourComponent },
+    { path: 'ajoutplatdujour', component: AjoutComponent },
 ];
 
 export const adminRouting = RouterModule.forChild(routes);

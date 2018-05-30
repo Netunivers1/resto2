@@ -120,7 +120,7 @@ export class PlatComponent implements OnInit {
 		let message = '';
 		if ( data.nom === '' ) message = 'Le champ nom ne doit pas être vide';
 		if ( data.prix === '' ) message = 'Le champ prix ne doit pas être vide';
-		if ( data.ingredient === '' ) message = 'Le champ ingredient ne doit pas être vide';
+		if (data.ingredient === '') data.ingredient = "-";
 
 		if ( message != '' ) return message;
 

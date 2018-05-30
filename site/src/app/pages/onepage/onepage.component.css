@@ -72,6 +72,15 @@
     background-size: cover;
 }
 
+.parallax-platdujour {
+    background-image: url('platdujour.jpg');
+    height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 #contact {
     padding-top: 60px;
 }
@@ -281,3 +290,35 @@
   }
 }
 /*Fin pour la section accueil*/
+.hide-content{
+  display: none;
+  transition: all 1s ease-out;
+}
+.tabs .tab{
+  transition: all 1s ease-out;
+  animation: hideandshow 0.8s;
+}
+.tabMenu{
+  color: black;
+  font-size: 36px;
+}
+.tabMenu .tabMenuList{
+  display: inline-block;
+  list-style: none;
+  padding: 8px 100px 5px 2px;;
+  cursor: pointer;
+  animation: hideandshow 0.8s;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in;
+}
+.current{
+  border-bottom: 1px solid rgba(153, 153, 153, 1) !important;
+}
+@keyframes hideandshow{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

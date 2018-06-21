@@ -36,17 +36,18 @@
 }
 
 
+
 .parallax-entrees {
-    background-image: url('nos_entrees_1.jpg');
-    height: 300px;
+    background: url('nos_entrees_1.jpg') no-repeat center center fixed;
+    height: 350px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;    
 }
 
 .parallax-plats {
-    background-image: url('nos_plats.jpg');
+    background: url('nos_plats.jpg') no-repeat center center fixed;
     height: 300px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -55,7 +56,7 @@
 }
  
 .parallax-desserts {
-    background-image: url('nos_desserts.jpg');
+    background: url('nos_desserts.jpg') no-repeat center center fixed;
     height: 300px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -64,7 +65,7 @@
 }
 
 .parallax-boissons {
-    background-image: url('nos_boissons.jpg');
+    background: url('nos_boissons.jpg') no-repeat center center fixed;
     height: 300px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -73,7 +74,7 @@
 }
 
 .parallax-platdujour {
-    background-image: url('platdujour.jpg');
+    background: url('platdujour.jpg') no-repeat center center fixed;
     height: 300px;
     -webkit-background-size: cover;
     -moz-background-size: cover;

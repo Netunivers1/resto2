@@ -313,7 +313,7 @@
   transition: all 0.2s ease-in;
 }
 .current{
-  border-bottom: 1px solid rgba(153, 153, 153, 1) !important;
+  border-bottom: 1px solid rgba(153, 153, 153, 1);
 }
 @keyframes hideandshow{
   0%{

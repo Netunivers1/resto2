@@ -19,6 +19,13 @@ export class BoissonComponent implements OnInit {
 	idBoissonTodelete;
 	boissonsCharger = false;
 	boissonToModifier = false;
+	paginate_show:boolean = false;
+	paginate:Array<number>;
+	page_current:number = 0;
+	p_prev:number;
+	p_next:number;
+	max_page:number = 2;
+	limits:number = 5;
 
 	headers: Headers;
     options: RequestOptions;	
@@ -38,18 +45,63 @@ export class BoissonComponent implements OnInit {
 
 		console.log(this.deleted);		
 
-		let url = urlApi + '/boisson';
+		this.pagination(1); 	
+	}
 
-		this.http.get(url)
+	/**
+	 * Pagination request
+	 *
+	 * @param page offset from where to show
+	 *
+	 * @return void
+	*/
+	pagination(page_param:number, limits:number = 0) {
+		let is_paginate_allowed:boolean = true;
+
+		if (page_param == this.page_current && limits == 0)
+			is_paginate_allowed = false;
+
+		if(limits == 0)
+			limits = this.limits;
+		else
+			this.limits = limits;
+
+		// check if paginate is allowed
+		if (page_param == 0)
+			is_paginate_allowed = false;
+
+		if(is_paginate_allowed) {
+			this.boissonsCharger = false;
+			this.http.get(urlApi + '/boisson/1/' + page_param + "/" + limits)
 			.map(
 				(response) => response.json()
 			)
 			.subscribe(
 				(data) => {
-					this.boissons = data;
-					this.boissonsCharger = (data.length > 0) ? true : false;
+					this.boissons = data.contain;
+					this.boissonsCharger = (data.contain.length > 0) ? true : false;
+					this.p_prev = data.p_prev;
+					this.p_next = data.p_next;
+					this.page_current = data.p_current;
+
+					this.paginate_show = (data.count > this.limits);
+
+					let page = [];
+					let max = Math.ceil(data.count / limits);
+					for (var i = 1; i <= max; ++i) {
+						page.push(i);
+					}
+
+					this.max_page = page.length;
+					this.paginate = page;
+
+					if(page_param == 1)
+						this.p_prev = 0;
+					if(this.p_next > this.max_page)
+						this.p_next = 0;
 				}
 			)  	
+		}
 	}
 
 	supprimerBoisson(boisson) {

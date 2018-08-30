@@ -17,15 +17,15 @@ export class BoissonComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
-		let url = urlApi + '/boisson';
+		let url = urlApi + '/boisson/0';
 		this.http.get(url)
 			.map(
 				(response) => response.json()
 			)
 			.subscribe(
 				(data) => {
-					this.boissons = data;
-					this.boissonsCharger = (data.length > 0) ? true : false;
+					this.boissons = data.contain;
+					this.boissonsCharger = (data.contain.length > 0) ? true : false;
 				}
 			);			
 	}

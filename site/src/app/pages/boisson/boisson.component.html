@@ -3,7 +3,7 @@
         <div id="text">Chargement des boissons en cours...</div>
     </div> 
 
-    <div class="row" style="margin-bottom: 20px;" >
+    <div class="row hidden-sm-down" style="margin-bottom: 20px;" >
         <div class="col-md-6">            
         </div>
         <div class="col-md-3">
@@ -14,17 +14,17 @@
         </div>
     </div>
 
-    <div class="row aff_mobile" *ngFor="let i of boissons" style="margin-bottom: 20px;" >
+    <div class="row aff_mobile menu-details" *ngFor="let i of boissons" style="margin-bottom: 20px;" >
         <div class="col-md-6">  
         	<h2>{{i.nom | uppercase}}</h2>
         </div>
-        <div class="col-md-3" id="list-prix">
-            <p id="show-mobile"><strong>33cl</strong></p>
+        <div class="col-md-3 d-flex list-prix" id="list-prix">
             <p id="prix_pm">{{i.pm}}</p>
+            <p id="show-mobile" class="hidden-md-up"><strong>33cl</strong></p>
         </div>
-        <div class="col-md-3" id="list-prix">
-             <p id="show-mobile"><strong>50cl</strong></p>
+        <div class="col-md-3 d-flex list-prix" id="list-prix">
             <p id="prix_gm">{{i.gm}}</p>
+             <p id="show-mobile" class="hidden-md-up"><strong>50cl</strong></p>
         </div>
     </div>
 </div>

@@ -15,8 +15,8 @@ export class Vins2Component implements OnInit {
 
   ngOnInit() {
     this.loading = true;
-    this.http.get(urlApi + '/vins').subscribe( (response) => {
-      this.products = (response.json().length) ? response.json() : [];
+    this.http.get(urlApi + '/vins/0').subscribe( (response) => {
+      this.products = (response.json().contain.length) ? response.json().contain : [];
       this.loading = false;
     });
   }

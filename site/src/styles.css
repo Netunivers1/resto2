@@ -62,6 +62,70 @@
     stroke: #ffa700;
   }
 }
+ul.paginate-ul {
+    justify-content: center;
+}
+.paginate-li {
+    list-style: none;
+    padding: 5px 9px;
+    background: #ffffff;
+    margin: 0 5px;
+    cursor: pointer;
+    flex-basis: 5%;
+    text-align: center;
+    box-shadow: 0 0 2px 1px #29425a;
+    border-radius: 5px;
+    font-weight: 400;
+}
+.paginate-li.current {
+    background: #f07f0a;
+    color: #ffffff;
+    cursor: default;
+}
+.paginate-li.disable {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.card-title {
+  flex-grow: 1;
+}
+.paginate-limit {
+  color: #ffffff;
+      font-weight: 500;
+}
+.paginate-limit select {
+  min-width: 52px;
+  font-size: 18px;
+  padding: 5px 4px;
+  border: none;
+  background-color: #c36707;
+  border-radius: 4px;
+  color: white;
+}
+
+#overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
 .price-detail {
   height: fit-content;
   margin: auto;
